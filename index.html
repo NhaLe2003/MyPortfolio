@@ -1,195 +1,293 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Lê Thanh Nhã</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-          crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio | Lê Thanh Nhã</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css"/>
+
+    <script
+        src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+        type="module"
+    ></script>
+
 </head>
+
 <body class="bg-gray-900 text-gray-200">
 
-    <!-- Header / Navigation -->
-    <header class="bg-gray-900/80 backdrop-blur-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <div class="flex items-center">
-                    <a href="#" class="text-2xl font-bold text-white">Lê Thanh Nhã</a>
-                </div>
-                <nav class="hidden md:flex space-x-8">
-                    <a href="#skills" class="text-gray-300 hover:text-white transition-colors duration-300">Kỹ năng</a>
-                    <a href="#experience" class="text-gray-300 hover:text-white transition-colors duration-300">Kinh nghiệm</a>
-                    <a href="#education"   class="text-gray-300 hover:text-white">Học vấn</a>
-                    <a href="#projects" class="text-gray-300 hover:text-white transition-colors duration-300">Dự án</a>
-                    <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors duration-300">Liên hệ</a>
-                </nav>
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
+  <!-- Header -->
+  <header class="bg-gray-900/80 backdrop-blur-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="#" class="text-2xl font-bold text-white">Lê Thanh Nhã</a>
+        <nav class="hidden md:flex space-x-8">
+          <a href="#skills"     class="text-gray-300 hover:text-white transition-colors">Kỹ năng</a>
+          <a href="#experience" class="text-gray-300 hover:text-white transition-colors">Kinh nghiệm</a>
+          <a href="#education"  class="text-gray-300 hover:text-white transition-colors">Học vấn</a>
+          <a href="#projects"   class="text-gray-300 hover:text-white transition-colors">Dự án</a>
+          <a href="#contact"    class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">Liên hệ</a>
+        </nav>
+
+        <div class="flex items-center space-x-4">
+          <!-- Theme toggle button -->
+          <button id="theme-toggle" class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+            <i id="theme-icon" class="fas fa-moon text-lg"></i>
+          </button>
+
+
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
         </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden hidden">
-            <a href="#skills" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700">Kỹ năng</a>
-            <a href="#experience" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700">Kinh nghiệm</a>
-            <a href="#education"  class="block py-2 px-4 text-gray-300 hover:bg-gray-700">Học vấn</a>
-            <a href="#projects" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700">Dự án</a>
-            <a href="#contact" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700">Liên hệ</a>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden">
+      <a href="#skills"     class="block py-2 px-4 text-gray-300 hover:bg-gray-700">Kỹ năng</a>
+      <a href="#experience" class="block py-2 px-4 text-gray-300 hover:bg-gray-700">Kinh nghiệm</a>
+      <a href="#education"  class="block py-2 px-4 text-gray-300 hover:bg-gray-700">Học vấn</a>
+      <a href="#projects"   class="block py-2 px-4 text-gray-300 hover:bg-gray-700">Dự án</a>
+      <a href="#contact"    class="block py-2 px-4 text-gray-300 hover:bg-gray-700">Liên hệ</a>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Hero Section -->
+    <section id="hero" class="relative h-screen overflow-hidden" data-aos="fade-up">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <!-- Text + Typed -->
+        <div class="text-center md:text-left">
+          <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-4">
+            <span id="typed"></span>
+          </h1>
+          <p class="text-lg text-gray-300 mb-6">
+            Tôi là Lê Thanh Nhã – đam mê tối ưu hóa quy trình sản xuất.
+          </p>
+          <div class="relative z-10 justify-center md:justify-start space-x-8 mb-6">
+            <!--Linkedin-->
+            <a href="https://linkedin.com/in/lethanhnha2003/" target="_blank" rel="noopener noreferrer"
+               class="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
+              <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <!-- facebook -->
+            <a href="https://www.facebook.com/lethanhnhaLK10/" target="_blank" rel="noopener noreferrer"
+               class="text-gray-400 hover:text-white transition-colors" aria-label="facebook">
+              <i class="fab fa-facebook fa-2x"></i>
+            </a>
+            <!-- mail -->
+            <a href="mailto:lethanhnha2507@gmail.com" class="text-gray-400 hover:text-white transition-colors" aria-label="Email">
+              <i class="fas fa-envelope fa-2x"></i>
+            </a>
+          </div>
+             <!-- Scroll Indicator: đặt trực tiếp dưới section -->
+              <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+                <a href="#skills" class="inline-block p-2 text-gray-400 hover:text-white transition-colors animate-bounce" aria-label="Scroll to skills">
+                  <i class="fas fa-chevron-down fa-2x"></i>
+                </a>
+              </div>
         </div>
-    </header>
+        <!-- Avatar -->
+        <div class="flex items-center justify-center">
+          <div class="profile-img-container">
+            <img src="image/Myphoto.jpg" alt="Ảnh của Lê Thanh Nhã" class="profile-img">
+          </div>
+        </div>
+      </div>
+      <dotlottie-player
+            src="https://lottie.host/201af890-07a4-4c72-918d-5501130cff6e/jcUIvb1mYJ.lottie"
+            background="transparent"
+            speed="1"
+            class="absolute inset-0 w-full h-full object-cover opacity-30 filter brightness-75 blur-sm" + class="absolute inset-0 w-full h-full object-cover opacity-30 filter brightness-75 blur-sm pointer-events-none"
+            loop
+            autoplay
+        ></dotlottie-player>
+    </section>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <!-- Hero Section -->
-        <section id="hero" class="py-20 md:py-32">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                <div class="text-center md:text-left">
-                    <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight">
-                        Chào bạn, tôi là Lê Thanh Nhã
-                    </h1>
-                    <p class="mt-6 text-lg text-gray-300">
-                        Một Kỹ sư Tự động hóa đam mê tối ưu hóa quy trình sản xuất trong nhà máy. Với kiến thức chuyên môn và tinh thần trách nhiệm, tôi luôn tìm kiếm cơ hội để phát triển và tạo ra giá trị.
-                    </p>
-                    <div class="mt-8 flex justify-center md:justify-start space-x-6">
-                        <a href="https://linkedin.com/in/lethanhnha2003/" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="LinkedIn">
-                           <i class="fab fa-linkedin fa-2x"></i>
-                        </a>
-                        <a href="mailto:lethanhnha2507@gmail.com" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="Email">
-                           <i class="fas fa-envelope fa-2x"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="flex items-center justify-center">
-                    <div class="profile-img-container">
-                        <img src="Image/Myphoto.jpg" alt="Ảnh của Lê Thanh Nhã" class="profile-img">
-                    </div>
-                </div>
+    <!-- Robot -->
+    <!-- <section class="relative overflow-hidden -mt-16">
+        <div class="robot-container" data-aos="fade-up" data-aos-delay="300">
+            <dotlottie-player
+            src="https://lottie.host/201af890-07a4-4c72-918d-5501130cff6e/jcUIvb1mYJ.lottie"
+            background="transparent"
+            speed="1"
+            loop
+            autoplay
+            ></dotlottie-player>
+        </div>
+    </section> -->
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="relative py-20 bg-gradient-to-br from-blue-900 via-gray-900 to-black bg-opacity-50 data-aos="fade-up">
+        <div class="absolute inset-0 pointer-events-none">
+            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="20%" cy="30%" r="200" fill="rgba(59,130,246,0.1)"/>
+                <rect x="60%" y="10%" width="300" height="300" fill="rgba(99,102,241,0.1)"/>
+                <!-- … -->
+            </svg>
+        </div>
+        <div class="text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white">Kỹ năng chuyên môn</h2>
+        <p class="mt-4 max-w-2xl mx-auto text-gray-400">
+          Tôi áp dụng kiến thức và kỹ năng của mình để giải quyết các bài toán thực tế trong công nghiệp.
+        </p>
+      </div>
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-2">
+          <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white">
+            <i class="fa-solid fa-robot fa-xl"></i>
+          </div>
+          <h3 class="mt-6 text-xl font-bold text-white">Lập trình & Điều khiển</h3>
+          <p class="mt-2 text-gray-400">Lập trình PLC cho hệ thống tự động, phát triển phần mềm điều khiển và giám sát trên WinForms C#.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-2">
+          <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white">
+            <i class="fa-solid fa-ruler-combined fa-xl"></i>
+          </div>
+          <h3 class="mt-6 text-xl font-bold text-white">Thiết kế Cơ khí & Mạch</h3>
+          <p class="mt-2 text-gray-400">Thiết kế mô hình 3D với SolidWorks, bản vẽ 2D AutoCAD và mạch điện công nghiệp.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-2">
+          <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white">
+            <i class="fa-solid fa-chart-line fa-xl"></i>
+          </div>
+          <h3 class="mt-6 text-xl font-bold text-white">Phân tích & Mô phỏng</h3>
+          <p class="mt-2 text-gray-400">Sử dụng Python và Matlab để phân tích dữ liệu, xây dựng thuật toán và mô phỏng hệ thống điều khiển.</p>
+        </div>
+      </div>
+
+      <!-- Technology Icons -->
+      <div class="mt-20 text-center">
+        <h3 class="text-2xl md:text-3xl font-bold text-white">Công cụ & Công nghệ</h3>
+        <div class="mt-10 flex flex-wrap justify-center items-center gap-8 md:gap-12">
+          <div class="flex flex-col items-center group">
+            <img src="image/imgPLC.jpg" alt="PLC Programming" class="h-16 w-16 object-contain transition-transform duration-300 group-hover:scale-110">
+            <span class="mt-3 text-sm font-medium text-gray-400 group-hover:text-white">PLC</span>
+          </div>
+          <div class="flex flex-col items-center group">
+            <img src="image/CLogo.png" alt="C# Programming" class="h-16 w-16 object-contain transition-transform duration-300 group-hover:scale-110">
+            <span class="mt-3 text-sm font-medium text-gray-400 group-hover:text-white">C#</span>
+          </div>
+          <div class="flex flex-col items-center group">
+            <img src="image/SolidworksLogo.png" alt="SolidWorks" class="h-16 w-16 object-contain transition-transform duration-300 group-hover:scale-110">
+            <span class="mt-3 text-sm font-medium text-gray-400 group-hover:text-white">SolidWorks</span>
+          </div>
+          <div class="flex flex-col items-center group">
+            <img src="image/Autocad.png" alt="AutoCAD" class="h-16 w-16 object-contain transition-transform duration-300 group-hover:scale-110">
+            <span class="mt-3 text-sm font-medium text-gray-400 group-hover:text-white">AutoCAD</span>
+          </div>
+          <div class="flex flex-col items-center group">
+            <img src="image/python.png" alt="Python" class="h-16 w-16 object-contain transition-transform duration-300 group-hover:scale-110">
+            <span class="mt-3 text-sm font-medium text-gray-400 group-hover:text-white">Python</span>
+          </div>
+          <div class="flex flex-col items-center group">
+            <img src="image/matlab.png" alt="Matlab" class="h-16 w-16 object-contain transition-transform duration-300 group-hover:scale-110">
+            <span class="mt-3 text-sm font-medium text-gray-400 group-hover:text-white">Matlab</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 section-fade-in" data-aos="fade-up">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-white">Kinh nghiệm</h2>
+        <p class="mt-4 max-w-2xl mx-auto text-gray-400">Những vị trí tôi đã đảm nhiệm và đóng góp chính.</p>
+      </div>
+      <div class="relative max-w-3xl mx-auto">
+        <div class="absolute left-4 top-0 h-full w-0.5 bg-gray-700"></div>
+        <!-- Item 1 -->
+        <!-- <div class="relative pl-12 mb-12">
+          <div class="absolute left-4 top-1 w-4 h-4 bg-blue-500 rounded-full border-4 border-gray-900"></div>
+          <p class="text-sm text-gray-400">07/2024 - Hiện tại</p>
+          <h3 class="text-xl font-bold text-white mt-1">Factory Operation Development</h3>
+          <p class="text-md text-gray-300">FYN Group</p>
+          <ul class="mt-3 list-disc list-inside text-gray-400">
+            <li>Nâng cấp và cấu hình dây chuyền sản xuất để tăng năng suất.</li>
+            <li>Thiết kế dụng cụ hỗ trợ công nhân.</li>
+          </ul>
+        </div> -->
+        <!-- Accordion Item 1 -->
+        <details class="group border border-gray-700 rounded-lg overflow-hidden">
+          <summary class="flex items-center justify-between px-6 py-4 cursor-pointer bg-gray-800 hover:bg-gray-700 transition-colors">
+            <div class="flex items-center space-x-4">
+              <span class="w-3 h-3 bg-blue-500 rounded-full"></span>
+              <span class="text-gray-400 text-sm">07/2024 – Hiện tại</span>
+              <div class="flex items-center space-x-2">
+                <h3 class="text-white font-semibold">Factory Operation Development</h3>
+                <img src="image/FYNLogo.png" alt="FYN Group Logo" class="h-10 w-13 object-contain">
+                <p class="text-gray-400">FYN Group</p>
+              </div>
             </div>
-        </section>
+            <i class="fas fa-chevron-down text-gray-400 transition-transform duration-200 group-open:rotate-180"></i>
+          </summary>
+          <div class="px-6 py-4 bg-gray-900 text-gray-300">
+            <ul class="list-disc list-inside space-y-2">
+              <li>Nâng cấp và cấu hình dây chuyền sản xuất để tăng năng suất.</li>
+              <li>Thiết kế dụng cụ hỗ trợ công nhân sản xuất.</li>
+            </ul>
+          </div>
+        </details>
+        <!-- Item 2 -->
+        <!-- <div class="relative pl-12 mb-12">
+          <div class="absolute left-4 top-1 w-4 h-4 bg-blue-500 rounded-full border-4 border-gray-900"></div>
+          <p class="text-sm text-gray-400">05/2023 - 07/2023</p>
+          <h3 class="text-xl font-bold text-white mt-1">IT Helper</h3>
+          <p class="text-md text-gray-300">VTS Technology</p>
+          <ul class="mt-3 list-disc list-inside text-gray-400">
+            <li>Hỗ trợ phát triển phần mềm quản lý nhân viên bằng WinForms C#.</li>
+          </ul>
+        </div> -->
 
-        <!-- Skills Section -->
-        <section id="skills" class="py-20 section-fade-in">
-            <div class="text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-white">Kỹ năng chuyên môn</h2>
-                <p class="mt-4 max-w-2xl mx-auto text-gray-400">
-                    Tôi áp dụng kiến thức và kỹ năng của mình để giải quyết các bài toán thực tế trong công nghiệp.
-                </p>
+        <!-- Accordion Item 2 -->
+        <details class="group border border-gray-700 rounded-lg overflow-hidden">
+          <summary class="flex items-center justify-between px-6 py-4 cursor-pointer bg-gray-800 hover:bg-gray-700 transition-colors">
+            <div class="flex items-center space-x-4">
+              <span class="w-3 h-3 bg-blue-500 rounded-full"></span>
+              <span class="text-gray-400 text-sm">05/2023 – 07/2023</span>
+              <div class="flex items-center space-x-2">
+                <h3 class="text-white font-semibold">IT Helper</h3>
+                <img src="Image\VTStekLogo.png" alt="VTStek Logo" class="h-10 w-13 object-contain">
+                <p class="text-gray-400">VTS Technology</p>
+              </div>
             </div>
-
-            <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white">
-                        <i class="fa-solid fa-robot fa-xl"></i>
-                    </div>
-                    <h3 class="mt-6 text-xl font-bold text-white">Lập trình & Điều khiển</h3>
-                    <p class="mt-2 text-gray-400">Lập trình PLC cho các hệ thống tự động, phát triển phần mềm điều khiển và giám sát trên máy tính (WinForms C#).</p>
-                </div>
-                <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white">
-                        <i class="fa-solid fa-ruler-combined fa-xl"></i>
-                    </div>
-                    <h3 class="mt-6 text-xl font-bold text-white">Thiết kế Cơ khí & Mạch</h3>
-                    <p class="mt-2 text-gray-400">Thiết kế mô hình 3D với SolidWorks, bản vẽ kỹ thuật 2D với AutoCAD và thiết kế mạch điện công nghiệp.</p>
-                </div>
-                <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white">
-                       <i class="fa-solid fa-chart-line fa-xl"></i>
-                    </div>
-                    <h3 class="mt-6 text-xl font-bold text-white">Phân tích & Mô phỏng</h3>
-                    <p class="mt-2 text-gray-400">Sử dụng Python và Matlab để phân tích dữ liệu, xây dựng thuật toán và mô phỏng các hệ thống điều khiển phức tạp.</p>
-                </div>
-            </div>
-
-            <div class="mt-20">
-                <div class="text-center">
-                    <h3 class="text-2xl md:text-3xl font-bold text-white">Công cụ & Công nghệ</h3>
-                </div>
-                <div class="mt-10 flex flex-wrap justify-center items-center gap-8 md:gap-12">
-                    <div class="flex flex-col items-center group">
-                        <img src="Image/imgPLC.jpg" alt="PLC Programming" class="h-16 w-16 object-contain transition-transform duration-300 group-hover:scale-110">
-                        <span class="mt-3 text-sm font-medium text-gray-400 group-hover:text-white transition-colors duration-300">PLC Programming</span>
-                    </div>
-                    <div class="flex flex-col items-center group">
-                        <img src="Image/CLogo.png" alt="C# Programming" class="h-16 w-16 object-contain transition-transform duration-300 group-hover:scale-110">
-                        <span class="mt-2 text-sm font-medium text-gray-400 group-hover:text-white transition-colors duration-300">C#</span>
-                    </div>
-                    <div class="flex flex-col items-center group">
-                        <img src="Image/SolidworksLogo.png" alt="SolidWorks" class="h-16 w-16 object-contain transition-transform duration-300 group-hover:scale-110">
-                        <span class="mt-3 text-sm font-medium text-gray-400 group-hover:text-white transition-colors duration-300">SolidWorks</span>
-                    </div>
-                    <div class="flex flex-col items-center group">
-                        <img src="Image/Autocad.png" alt="AutoCAD" class="h-16 w-16 object-contain transition-transform duration-300 group-hover:scale-110">
-                        <span class="mt-3 text-sm font-medium text-gray-400 group-hover:text-white transition-colors duration-300">AutoCAD</span>
-                    </div>
-                    <div class="flex flex-col items-center group">
-                        <img src="Image/python.png" alt="Python" class="h-16 w-16 object-contain transition-transform duration-300 group-hover:scale-110">
-                        <span class="mt-2 text-sm font-medium text-gray-400 group-hover:text-white transition-colors duration-300">Python</span>
-                    </div>
-                    <div class="flex flex-col items-center group">
-                        <img src="Image/matlab.png" alt="Matlab" class="h-16 w-16 object-contain transition-transform duration-300 group-hover:scale-110">
-                        <span class="mt-3 text-sm font-medium text-gray-400 group-hover:text-white transition-colors duration-300">Matlab</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience & Education Section -->
-        <section id="experience" class="py-20 section-fade-in">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-white">Kinh nghiệm</h2>
-                <p class="mt-4 max-w-2xl mx-auto text-gray-400">Những vị trí tôi đã đảm nhiệm</p>
-            </div>
-            
-            <div class="relative max-w-3xl mx-auto">
-                <div class="absolute left-4 top-0 h-full w-0.5 bg-gray-700"></div>
-
-                <div class="relative pl-12 mb-12">
-                    <div class="absolute left-4 top-1 w-4 h-4 bg-blue-500 rounded-full border-4 border-gray-900"></div>
-                    <p class="text-sm text-gray-400">07/2024 - Hiện tại</p>
-                    <h3 class="text-xl font-bold text-white mt-1">Thực tập sinh Phát triển Vận hành Nhà máy</h3>
-                    <p class="text-md text-gray-300">FYN Group</p>
-                    <ul class="mt-3 list-disc list-inside text-gray-400 space-y-1">
-                        <li>Nâng cấp và cấu hình lại dây chuyền sản xuất để tăng năng suất.</li>
-                        <li>Thiết kế công cụ, dụng cụ hỗ trợ công nhân sản xuất.</li>
-                    </ul>
-                </div>
-                
-                <div class="relative pl-12 mb-12">
-                    <div class="absolute left-4 top-1 w-4 h-4 bg-blue-500 rounded-full border-4 border-gray-900"></div>
-                    <p class="text-sm text-gray-400">05/2023 - 07/2023</p>
-                    <h3 class="text-xl font-bold text-white mt-1">IT Helper</h3>
-                    <p class="text-md text-gray-300">VTS Technology</p>
-                     <ul class="mt-3 list-disc list-inside text-gray-400 space-y-1">
-                        <li>Hỗ trợ phát triển phần mềm quản lý nhân viên bằng Winform C#.</li>
-                     </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education Section -->
-    <section id="education" class="py-20 section-fade-in">
+            <i class="fas fa-chevron-down text-gray-400 transition-transform duration-200 group-open:rotate-180"></i>
+          </summary>
+          <div class="px-6 py-4 bg-gray-900 text-gray-300">
+            <ul class="list-disc list-inside space-y-2">
+              <li>Hỗ trợ phát triển phần mềm quản lý nhân viên bằng WinForms C#.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </section> 
+    <!-- Education Section -->
+    <section id="education" class="py-20 section-fade-in" data-aos="fade-up">
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold text-white">Học vấn</h2>
         <p class="mt-4 max-w-2xl mx-auto text-gray-400">Quá trình học tập của tôi.</p>
       </div>
-
       <div class="relative max-w-3xl mx-auto">
         <div class="absolute left-4 top-0 h-full w-0.5 bg-gray-700"></div>
 
-        <!-- Đại học Bách Khoa -->
         <div class="relative pl-12 mb-12">
           <div class="absolute left-4 top-1 w-4 h-4 bg-blue-500 rounded-full border-4 border-gray-900"></div>
           <p class="text-sm text-gray-400">2021 - 2025</p>
@@ -201,72 +299,109 @@
           </ul>
         </div>
 
-        <!-- Đại học Bách Khoa -->
         <div class="relative pl-12 mb-12">
           <div class="absolute left-4 top-1 w-4 h-4 bg-blue-500 rounded-full border-4 border-gray-900"></div>
           <p class="text-sm text-gray-400">2018 - 2021</p>
           <h3 class="text-xl font-bold text-white mt-1">Trung Học Phổ Thông Chuyên Nguyễn Quang Diêu - Đồng Tháp</h3>
-          <p class="text-md text-gray-300">Chuyên Lý khóa 10</p>
+          <p class="text-md text-gray-300">Chuyên Lý Khóa 10</p>
           <ul class="mt-3 list-disc list-inside text-gray-400">
             <li>GPA: 3.2/4.0</li>
-            <li>TOEIC Nghe & Đọc: 715.</li>
           </ul>
         </div>
-
-
       </div>
     </section>
 
-
-        <!-- Projects Section -->
-        <section id="projects" class="py-20 section-fade-in">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-white">Dự án tiêu biểu</h2>
-                <p class="mt-4 max-w-2xl mx-auto text-gray-400">Dự án thể hiện khả năng ứng dụng công nghệ vào giải quyết vấn đề thực tế.</p>
-            </div>
-            
-            <div class="flex justify-center">
-                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300 max-w-md">
-                    <img src="https://placehold.co/600x400/1F2937/FFFFFF?text=Simatic+WinCC" alt="Project 1" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white">Simatic WinCC Unified Plant Intelligence</h3>
-                        <p class="mt-2 text-gray-400">Mô phỏng dây chuyền sản xuất đóng chai, tính toán các chỉ số sản xuất (OEE). Ứng dụng ChatGPT để tự động hóa báo cáo và tối ưu vận hành.</p>
-                        <div class="mt-4 flex flex-wrap gap-2">
-                            <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">PLC</span>
-                            <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">WinCC Unified</span>
-                             <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">ChatGPT API</span>
-                        </div>
-                        <div class="mt-6 flex space-x-4">
-                            <a href="https://github.com/NhaLe2003/CapStoneProject" target="_blank" class="text-gray-300 hover:text-blue-400">Xem trên GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-20 text-center section-fade-in">
-             <h2 class="text-3xl md:text-4xl font-bold text-white">Liên hệ với tôi</h2>
-             <p class="mt-4 max-w-xl mx-auto text-gray-400">
-                 Tôi luôn sẵn sàng lắng nghe các cơ hội hợp tác hoặc chỉ đơn giản là một cuộc trò chuyện. Hãy kết nối với tôi!
-             </p>
-             <div class="mt-8">
-                <a href="mailto:lethanhnha2507@gmail.com" class="inline-block bg-blue-600 text-white text-lg font-semibold px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors duration-300">
-                    Gửi Email
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 section-fade-in" data-aos="fade-up">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-white">Dự án tiêu biểu</h2>
+        <p class="mt-4 max-w-2xl mx-auto text-gray-400">Các dự án tôi đã thực hiện.</p>
+      </div>
+      <div class="flex flex-wrap justify-center gap-6">
+        <!-- Project 1 -->
+        <div class="flex justify-center">
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300 max-w-md">
+            <img src="Image\Wincc.png"
+                alt="Simatic WinCC" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-white">Simatic WinCC Unified Plant Intelligence</h3>
+              <p class="mt-2 text-gray-400">Mô phỏng trạng thái hoạt động, lên lịch hoạt động, thiết lập các KPI, tính toán OEE.</p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">PLC</span>
+                <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">WinCC Unified</span>
+                <!-- <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">ChatGPT API</span> -->
+              </div>
+              <div class="mt-6 flex space-x-4">
+                <a href="https://github.com/NhaLe2003/CapStoneProject"
+                  target="_blank" rel="noopener noreferrer"
+                  class="text-gray-300 hover:text-blue-400">
+                  Xem trên GitHub
                 </a>
-             </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="border-t border-gray-800 mt-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-gray-500">
-            <p>&copy; Lê Thanh Nhã. Cùng nhau phát triển.</p>
+              </div>
+            </div>
+          </div>
         </div>
-    </footer>
+        <!-- Project 2 -->
+        <div class="flex justify-center">
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300 max-w-md">
+            <img src="Image\ArticulatedRobot.png"
+                alt="Simatic WinCC" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-white">RoBot</h3>
+              <p class="mt-2 text-gray-400">Mô phỏng Robot Articulated 3 bậc tự do.</p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">Matlab</span>
+                <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">Matlab Guide</span>
+                <!-- <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">ChatGPT API</span> -->
+              </div>
+              <div class="mt-6 flex space-x-4">
+                <a href="https://github.com/NhaLe2003/CapStoneProject"
+                  target="_blank" rel="noopener noreferrer"
+                  class="text-gray-300 hover:text-blue-400">
+                  Xem trên GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Custom JS -->
-    <script src="js/main.js"></script>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 text-center section-fade-in" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-bold text-white">Liên hệ với tôi</h2>
+      <p class="mt-4 max-w-xl mx-auto text-gray-400">
+        Tôi luôn sẵn sàng lắng nghe các cơ hội hợp tác hoặc chỉ đơn giản là một cuộc trò chuyện.
+      </p>
+      <div class="mt-8">
+        <dotlottie-player
+          src="https://lottie.host/9048dc0e-b5f6-46f6-adc6-8c560f35a936/KR3GXXTXA3.lottie"
+          background="transparent"
+          speed="1"
+          style="width: 100px; height: 100px; margin: 0 auto;"
+          loop
+          autoplay
+        ></dotlottie-player>
+        <a href="mailto:lethanhnha2507@gmail.com"
+           class="inline-block bg-blue-600 text-white text-lg font-semibold px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors">
+          Gửi Email
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-800 mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-gray-500">
+      <p>&copy; Lê Thanh Nhã. Cùng nhau phát triển.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
