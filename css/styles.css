@@ -84,3 +84,12 @@ lottie-player.object-cover {
 #hero lottie-player {
   filter: brightness(0.7);
 }
+
+
+@keyframes jump {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+.animate-jump {
+  animation: jump 1.2s ease-in-out infinite;
+}

@@ -101,3 +101,9 @@ tabs.forEach(tab => {
 if (tabs.length > 0) {
   tabs[0].click();
 }
+
+
+AOS.init({
+  duration: 800,   // thời gian mặc định cho các phần không chỉ định riêng
+  once: true       // chỉ chạy animation 1 lần khi scroll vào
+});
