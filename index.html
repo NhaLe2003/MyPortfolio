@@ -448,26 +448,42 @@
       </div>
     </section>
 
+
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-900">
-      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-        
+    <section id="contact" class="relative py-20 bg-gray-950 overflow-hidden">
+      <!-- Background Layer: Gradient + Decorative SVG -->
+      <div class="absolute inset-0 z-0 pointer-events-none">
+        <!-- Gradient background -->
+        <div class="w-full h-full bg-gradient-to-tr from-blue-950 via-gray-950 to-indigo-950 opacity-90"></div>
+        <!-- SVG decorative shape (waves) -->
+        <svg class="absolute top-0 left-0 w-full h-32 md:h-40 opacity-40" viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <path fill="#2563eb" fill-opacity="1" d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,133.3C840,107,960,85,1080,101.3C1200,117,1320,171,1380,197.3L1440,224L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+        </svg>
+        <!-- Right-side animated background effect (blurred blob) -->
+        <div class="hidden md:block absolute right-0 top-1/3 w-60 h-60 lg:w-80 lg:h-80 bg-blue-600 opacity-30 rounded-full blur-3xl animate-pulse"></div>
+      </div>
+      <div class="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 z-10">
         <!-- Card Contact -->
-        <div class="relative rounded-lg overflow-hidden shadow-lg">
-          <img src="Image/Contact.jpg" alt="Contact background"
-              class="absolute inset-0 w-full h-full object-cover" />
-          <div class="absolute inset-0 bg-gray-900/60"></div>
+        <div class="relative rounded-lg overflow-hidden shadow-lg bg-transparent">
+          <div class="absolute inset-0 w-full h-full flex items-center justify-center">
+            <img 
+              src="Image/Contact.jpg" 
+              alt="Contact background"
+              class="w-full max-w-[400px] md:max-w-[600px] h-[220px] md:h-[320px] lg:h-[400px] object-cover object-center rounded-lg opacity-50 mx-auto"
+              style="object-fit: cover; filter: blur(1px);"
+            />
+          </div>
+          <!-- Removed the black overlay here to avoid double dark background -->
           <div class="relative z-10 h-full flex items-center justify-center p-8">
-            
             <div class="text-center space-y-4">
               <dotlottie-player
                 src="https://lottie.host/9048dc0e-b5f6-46f6-adc6-8c560f35a936/KR3GXXTXA3.lottie"
                 background="transparent"
                 speed="1"
-                style="width: 200px; height: 200px; margin: 0 auto;"
+                style="width: 120px; height: 120px; margin: 0 auto;"
                 loop
                 autoplay
-                class="absolute inset-1/2 w-25 h-25 transform -translate-x-1/2 -translate-y-1/4 opacity-70 z-0 pointer-events-none"
+                class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/3 opacity-70 z-0 pointer-events-none"
               ></dotlottie-player>
               <span class="inline-block bg-blue-600 text-white font-semibold px-4 py-1 rounded">
                 CONTACT ME
@@ -491,25 +507,25 @@
                 <a href="https://zalo.me/84363685180"
                   target="_blank"
                   class="flex items-center hover:text-white transition-colors">
-                  <img src="Image/Zalo.png" alt="Zalo Icon" class="h-5 w-5 mr-2 animate-bounce">
+                  <img src="Image/Zalo.png" alt="Zalo Icon" class="h-6 w-6 mr-2 animate-bounce object-contain" style="max-width: 24px; max-height: 24px;">
                   +84 36 3685 180 (Zalo)
                 </a>
                 <!-- Linkedin-->
                 <a href="https://linkedin.com/in/lethanhnha2003/" target="_blank" rel="noopener noreferrer"
                   class="flex items-center hover:text-white transition-colors" aria-label="LinkedIn">
-                  <i class="fab fa-linkedin text-blue-400 h-6 mr-2 animate-bounce"></i>
+                  <i class="fab fa-linkedin text-blue-400 h-6 w-6 mr-2 animate-bounce"></i>
                   LinkedIn
                 </a>
                 <!-- Facebook -->
                 <a href="https://www.facebook.com/lethanhnhaLK10/" target="_blank" rel="noopener noreferrer"
                   class="flex items-center hover:text-white transition-colors" aria-label="facebook">
-                  <i class="fab fa-facebook text-blue-400 h-6 mr-2 animate-bounce"></i>
+                  <i class="fab fa-facebook text-blue-400 h-6 w-6 mr-2 animate-bounce"></i>
                   Facebook
                 </a>
                 <!-- Email: mailto -->
                 <a href="mailto:lethanhnha2507@gmail.com"
                   class="flex items-center hover:text-white transition-colors">
-                  <i class="fas fa-envelope mr-2 text-blue-400 h-6 animate-bounce"></i>
+                  <i class="fas fa-envelope mr-2 text-blue-400 h-6 w-6 animate-bounce"></i>
                   lethanhnha2507@gmail.com
                 </a>
               </div>
