@@ -16,31 +16,27 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/styles.css"/>
-
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-
-    <script
-        src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
-        type="module"
-    ></script>
-
+  <!-- DotLottie Player -->
+  <script
+    src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+    type="module"
+  ></script>
 </head>
 
 <body class="bg-gray-900 text-gray-200">
-
   <!-- Header -->
   <header class="bg-gray-900/80 backdrop-blur-md sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         <a href="#" class="text-2xl font-bold text-white">Lê Thanh Nhã</a>
         <nav class="hidden md:flex space-x-8">
-          <a href="#skills"     class="text-gray-300 hover:text-white transition-colors">Kỹ năng</a>
+          <a href="#skills" class="text-gray-300 hover:text-white transition-colors">Kỹ năng</a>
           <a href="#experience" class="text-gray-300 hover:text-white transition-colors">Kinh nghiệm</a>
-          <a href="#education"  class="text-gray-300 hover:text-white transition-colors">Học vấn</a>
-          <a href="#projects"   class="text-gray-300 hover:text-white transition-colors">Dự án</a>
-          <a href="#certificate"      class="text-gray-300 hover:text-white transition-colors">Chứng chỉ</a>
-          <a href="#activity"       class="text-gray-300 hover:text-white transition-colors">Các hoạt động</a>
-          <a href="#contact"    class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">Liên hệ</a>
+          <a href="#education" class="text-gray-300 hover:text-white transition-colors">Học vấn</a>
+          <a href="#projects" class="text-gray-300 hover:text-white transition-colors">Dự án</a>
+          <a href="#certificate" class="text-gray-300 hover:text-white transition-colors">Chứng chỉ</a>
+          <a href="#activity" class="text-gray-300 hover:text-white transition-colors">Các hoạt động</a>
+          <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">Liên hệ</a>
         </nav>
 
         <div class="flex items-center space-x-4">
@@ -49,25 +45,25 @@
             <i id="theme-icon" class="fas fa-moon text-lg"></i>
           </button>
 
-
-        <div class="md:hidden">
-          <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
-          </button>
+          <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4 6h16M4 12h16m-7 6h7" />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </div>
     <div id="mobile-menu" class="md:hidden hidden">
-      <a href="#skills"     class="block py-2 px-4 text-gray-300 hover:bg-gray-700">Kỹ năng</a>
+      <a href="#skills" class="block py-2 px-4 text-gray-300 hover:bg-gray-700">Kỹ năng</a>
       <a href="#experience" class="block py-2 px-4 text-gray-300 hover:bg-gray-700">Kinh nghiệm</a>
-      <a href="#education"  class="block py-2 px-4 text-gray-300 hover:bg-gray-700">Học vấn</a>
-      <a href="#projects"   class="block py-2 px-4 text-gray-300 hover:bg-gray-700">Dự án</a>
-      <a href="#certificate"      class="block py-2 px-4 text-gray-300 hover:bg-gray-700">Chứng chỉ</a>
-      <a href="#activity"       class="block py-2 px-4 text-gray-300 hover:bg-gray-700">Các hoạt động</a>
-      <a href="#contact"    class="block py-2 px-4 text-gray-300 hover:bg-gray-700">Liên hệ</a>
+      <a href="#education" class="block py-2 px-4 text-gray-300 hover:bg-gray-700">Học vấn</a>
+      <a href="#projects" class="block py-2 px-4 text-gray-300 hover:bg-gray-700">Dự án</a>
+      <a href="#certificate" class="block py-2 px-4 text-gray-300 hover:bg-gray-700">Chứng chỉ</a>
+      <a href="#activity" class="block py-2 px-4 text-gray-300 hover:bg-gray-700">Các hoạt động</a>
+      <a href="#contact" class="block py-2 px-4 text-gray-300 hover:bg-gray-700">Liên hệ</a>
     </div>
   </header>
 
@@ -99,12 +95,12 @@
               <i class="fas fa-envelope fa-2x"></i>
             </a> -->
           </div>
-             <!-- Scroll Indicator: đặt trực tiếp dưới section -->
-              <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
-                <a href="#skills" class="inline-block p-2 text-gray-400 hover:text-white transition-colors animate-bounce" aria-label="Scroll to skills">
-                  <i class="fas fa-chevron-down fa-2x"></i>
-                </a>
-              </div>
+          <!-- Scroll Indicator: đặt trực tiếp dưới section -->
+          <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+            <a href="#skills" class="inline-block p-2 text-gray-400 hover:text-white transition-colors animate-bounce" aria-label="Scroll to skills">
+              <i class="fas fa-chevron-down fa-2x"></i>
+            </a>
+          </div>
         </div>
         <!-- Avatar -->
         <div class="flex items-center justify-center">
@@ -114,13 +110,13 @@
         </div>
       </div>
       <dotlottie-player
-            src="https://lottie.host/201af890-07a4-4c72-918d-5501130cff6e/jcUIvb1mYJ.lottie"
-            background="transparent"
-            speed="1"
-            class="absolute inset-0 w-full h-full object-cover opacity-30 filter brightness-75 blur-sm" + class="absolute inset-0 w-full h-full object-cover opacity-30 filter brightness-75 blur-sm pointer-events-none"
-            loop
-            autoplay
-        ></dotlottie-player>
+        src="https://lottie.host/201af890-07a4-4c72-918d-5501130cff6e/jcUIvb1mYJ.lottie"
+        background="transparent"
+        speed="1"
+        class="absolute inset-0 w-full h-full object-cover opacity-30 filter brightness-75 blur-sm pointer-events-none"
+        loop
+        autoplay
+      ></dotlottie-player>
     </section>
 
     <!-- Robot -->
@@ -136,17 +132,16 @@
         </div>
     </section> -->
 
-
     <!-- Skills Section -->
-    <section id="skills" class="relative py-20 bg-gradient-to-br from-blue-900 via-gray-900 to-black bg-opacity-50 data-aos="fade-up">
-        <div class="absolute inset-0 pointer-events-none">
-            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20%" cy="30%" r="200" fill="rgba(59,130,246,0.1)"/>
-                <rect x="60%" y="10%" width="300" height="300" fill="rgba(99,102,241,0.1)"/>
-                <!-- … -->
-            </svg>
-        </div>
-        <div class="text-center">
+    <section id="skills" class="relative py-20 bg-gradient-to-br from-blue-900 via-gray-900 to-black bg-opacity-50" data-aos="fade-up">
+      <div class="absolute inset-0 pointer-events-none">
+        <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20%" cy="30%" r="200" fill="rgba(59,130,246,0.1)"/>
+          <rect x="60%" y="10%" width="300" height="300" fill="rgba(99,102,241,0.1)"/>
+          <!-- … -->
+        </svg>
+      </div>
+      <div class="text-center">
         <h2 class="text-3xl md:text-4xl font-bold text-white">Kỹ năng chuyên môn</h2>
         <p class="mt-4 max-w-2xl mx-auto text-gray-400">
           Tôi áp dụng kiến thức và kỹ năng của mình để giải quyết các bài toán thực tế trong công nghiệp.
@@ -221,8 +216,8 @@
         <div class="absolute left-4 top-0 h-full w-0.5 bg-gray-700"></div>
         <!-- Accordion Item 1 -->
         <div class="relative pl-12 mb-12"
-           data-aos="fade-right"
-           data-aos-duration="600">
+             data-aos="fade-right"
+             data-aos-duration="600">
           <div class="absolute left-4 top-1 w-4 h-4 bg-blue-500 rounded-full border-4 border-gray-900"></div>
           <p class="text-sm text-gray-400">07/2024 – Hiện tại</p>
           <h3 class="text-xl font-bold text-white mt-1">Factory Operation Development</h3>
@@ -234,9 +229,9 @@
         </div>
         <!-- Accordion Item 2 -->
         <div class="relative pl-12 mb-12"
-           data-aos="fade-right"
-           data-aos-duration="600"
-           data-aos-delay="200">
+             data-aos="fade-right"
+             data-aos-duration="600"
+             data-aos-delay="200">
           <div class="absolute left-4 top-1 w-4 h-4 bg-blue-500 rounded-full border-4 border-gray-900"></div>
           <p class="text-sm text-gray-400">05/2023 – 07/2023</p>
           <h3 class="text-xl font-bold text-white mt-1">IT Helper</h3>
@@ -246,7 +241,8 @@
           </ul>
         </div>
       </div>
-    </section> 
+    </section>
+
     <!-- Education Section -->
     <section id="education" class="py-20 section-fade-in" data-aos="fade-up">
       <div class="text-center mb-16">
@@ -254,8 +250,8 @@
         <p class="mt-4 max-w-2xl mx-auto text-gray-400">Quá trình học tập của tôi.</p>
       </div>
       <div class="relative max-w-3xl mx-auto"
-          data-aos="fade-right"
-          data-aos-duration="600">
+           data-aos="fade-right"
+           data-aos-duration="600">
         <div class="absolute left-4 top-0 h-full w-0.5 bg-gray-700"></div>
         <div class="relative pl-12 mb-12">
           <div class="absolute left-4 top-1 w-4 h-4 bg-blue-500 rounded-full border-4 border-gray-900"></div>
@@ -269,9 +265,9 @@
         </div>
 
         <div class="relative pl-12 mb-12"
-            data-aos="fade-right"
-            data-aos-duration="600"
-            data-aos-delay="200">
+             data-aos="fade-right"
+             data-aos-duration="600"
+             data-aos-delay="200">
           <div class="absolute left-4 top-1 w-4 h-4 bg-blue-500 rounded-full border-4 border-gray-900"></div>
           <p class="text-sm text-gray-400">2018 - 2021</p>
           <h3 class="text-xl font-bold text-white mt-1">Trung Học Phổ Thông Chuyên Nguyễn Quang Diêu - Đồng Tháp</h3>
@@ -294,19 +290,18 @@
         <div class="flex justify-center">
           <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300 max-w-md">
             <img src="Image\Wincc.png"
-                alt="Simatic WinCC" class="w-full h-48 object-cover">
+                 alt="Simatic WinCC" class="w-full h-48 object-cover">
             <div class="p-6">
               <h3 class="text-xl font-bold text-white">Simatic WinCC Unified Plant Intelligence</h3>
               <p class="mt-2 text-gray-400">Mô phỏng trạng thái hoạt động, lên lịch hoạt động, thiết lập các KPI, tính toán OEE.</p>
               <div class="mt-4 flex flex-wrap gap-2">
                 <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">PLC</span>
                 <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">WinCC Unified</span>
-                <!-- <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">ChatGPT API</span> -->
               </div>
               <div class="mt-6 flex">
                 <a href="https://github.com/NhaLe2003/Project1"
-                  target="_blank" rel="noopener noreferrer"
-                  class="inline-flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors animate-jump" aria-label="Xem trên GitHub">
+                   target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors animate-jump" aria-label="Xem trên GitHub">
                   <i class="fas fa-hand-point-right text-xl transition-transform duration-300 group-hover:translate-x-1"></i>
                   <span class="relative transition-transform duration-300 group-hover:scale-105">
                     Xem trên GitHub
@@ -320,19 +315,18 @@
         <div class="flex justify-center">
           <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300 max-w-md">
             <img src="Image\ArticulatedRobot.png"
-                alt="ArticulatedRobot" class="w-full h-48 object-cover">
+                 alt="ArticulatedRobot" class="w-full h-48 object-cover">
             <div class="p-6">
               <h3 class="text-xl font-bold text-white">RoBot</h3>
               <p class="mt-2 text-gray-400">Mô phỏng Robot Articulated 3 bậc tự do. Forward, Invert, Planning.</p>
               <div class="mt-4 flex flex-wrap gap-2">
                 <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">Matlab</span>
                 <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">Matlab Guide</span>
-                <!-- <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">ChatGPT API</span> -->
               </div>
               <div class="mt-6 flex">
                 <a href="https://github.com/NhaLe2003/ArticulatedRobot"
-                  target="_blank" rel="noopener noreferrer"
-                  class="inline-flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors animate-jump" aria-label="Xem trên GitHub">
+                   target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors animate-jump" aria-label="Xem trên GitHub">
                   <i class="fas fa-hand-point-right text-xl transition-transform duration-300 group-hover:translate-x-1"></i>
                   <span class="relative transition-transform duration-300 group-hover:scale-105">
                     Xem trên GitHub
@@ -344,10 +338,10 @@
         </div>
 
         <!-- Project 3 -->
-         <div class="flex justify-center">
+        <div class="flex justify-center">
           <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300 max-w-md">
             <img src="Image\ArticulatedRobot.png"
-                alt="Simatic WinCC" class="w-full h-48 object-cover">
+                 alt="Simatic WinCC" class="w-full h-48 object-cover">
             <div class="p-6">
               <h3 class="text-xl font-bold text-white">Capstone Project</h3>
               <p class="mt-2 text-gray-400">Ứng dụng AI và WinCC Unified trong giám sát hiệu suất sản xuất (OEE) đa Line</p>
@@ -357,12 +351,11 @@
                 <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">C#</span>
                 <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">MongoDb</span>
                 <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">HTML/CSS</span>
-                <!-- <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">ChatGPT API</span> -->
               </div>
               <div class="mt-6 flex space-x-4">
                 <a href="https://github.com/NhaLe2003/CapStoneProject"
-                  target="_blank" rel="noopener noreferrer"
-                  class="inline-flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors animate-jump" aria-label="Xem trên GitHub">
+                   target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors animate-jump" aria-label="Xem trên GitHub">
                   <i class="fas fa-hand-point-right text-xl transition-transform duration-300 group-hover:translate-x-1"></i>
                   <span class="relative transition-transform duration-300 group-hover:scale-105">
                     Xem trên GitHub
@@ -374,6 +367,7 @@
         </div>
       </div>
     </section>
+
     <!-- Certificate Section -->
     <section id="certificate" class="py-20 section-fade-in" data-aos="fade-up">
       <div class="text-center mb-16">
@@ -383,7 +377,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Certificate 1 -->
         <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
-          <img src="Image/PLC_Certificate.png" alt="Chứng chỉ Toeic" class="w-full h-48 object-cover">
+          <img src="Image\z5480404813667_619ea644e030cb49a8420c82dc65b2bc.jpg" alt="Chứng chỉ Toeic" class="w-full h-48 object-cover">
           <div class="p-6">
             <h3 class="text-xl font-bold text-white">Toeic Reading and Listening</h3>
             <p class="mt-2 text-gray-400">715/990</p>
@@ -391,7 +385,7 @@
         </div>
         <!-- Certificate 2 -->
         <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
-          <img src="Image/WinCC_Certificate.png" alt="Chứng chỉ Matlab" class="w-full h-48 object-cover">
+          <img src="Image\UC-12fbaa28-4773-44fc-9702-f1bba3628b7f.jpg" alt="Chứng chỉ Matlab" class="w-full h-48 object-cover">
           <div class="p-6">
             <h3 class="text-xl font-bold text-white">MATLAB Master Class: Go from Beginner to Expert in MATLAB</h3>
             <p class="mt-2 text-gray-400">Udemy</p>
@@ -399,7 +393,7 @@
         </div>
         <!-- Certificate 3 -->
         <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
-          <img src="Image/Matlab_Certificate.png" alt="Chứng chỉ Python" class="w-full h-48 object-cover">
+          <img src="Image\Screenshot 2025-06-26 095250.png" alt="Chứng chỉ Python" class="w-full h-48 object-cover">
           <div class="p-6">
             <h3 class="text-xl font-bold text-white">Data Analysis with Python</h3>
             <p class="mt-2 text-gray-400">Free Code Camp</p>
@@ -407,6 +401,7 @@
         </div>
       </div>
     </section>
+
     <!-- Activity Section -->
     <section id="activity" class="py-20 section-fade-in" data-aos="fade-up">
       <div class="text-center mb-16">
@@ -416,7 +411,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Activity 1 -->
         <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
-          <img src="Image/Activity1.jpg" alt="Hoạt động 1" class="w-full h-48 object-cover">
+          <img src="Image\483763158_9361457863946651_5463142257621129948_n.jpg" alt="Hoạt động 1" class="w-full h-48 object-cover">
           <div class="p-6">
             <h3 class="text-xl font-bold text-white">Thành viên CLB BKFC</h3>
             <p class="mt-2 text-gray-400">Thành viên ban truyền thông.</p>
@@ -425,21 +420,20 @@
         </div>
         <!-- Activity 2 -->
         <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
-          <img src="Image/Activity2.jpg" alt="Hoạt động 2" class="w-full h-48 object-cover">
+          <img src="Image\452931261_994877705975594_6983130677840463706_n.jpg" alt="Hoạt động 2" class="w-full h-48 object-cover">
           <div class="p-6">
             <h3 class="text-xl font-bold text-white">Thành viên CLB BKRA và Fablab</h3>
             <p class="mt-2 text-gray-400">Thành viên nhóm lập trình Backend.</p>
             <div class="mt-4 flex flex-wrap gap-2">
-                <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">C#</span>
-                <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">MSSQL</span>
-                <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">PLC</span>
-                <!-- <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">ChatGPT API</span> -->
-              </div>
+              <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">C#</span>
+              <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">MSSQL</span>
+              <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">PLC</span>
+            </div>
           </div>
         </div>
         <!-- Activity 3 -->
         <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
-          <img src="Image/Activity3.jpg" alt="Hoạt động 3" class="w-full h-48 object-cover">
+          <img src="Image\IMG_2651.JPG" alt="Hoạt động 3" class="w-full h-48 object-cover">
           <div class="p-6">
             <h3 class="text-xl font-bold text-white">Tham gia tình nguyện "Ngược dòng Châu Mạ"</h3>
             <p class="mt-2 text-gray-400">Giúp đỡ, tạo sân chơi cho các em nhỏ vùng Tây Nguyên.</p>
@@ -447,7 +441,6 @@
         </div>
       </div>
     </section>
-
 
     <!-- Contact Section -->
     <section id="contact" class="relative py-20 bg-gray-950 overflow-hidden">
@@ -496,38 +489,39 @@
               <div class="space-y-2 text-gray-300">
                 <!-- Địa chỉ: link tới Google Maps -->
                 <a href="https://www.google.com/maps/search/?api=1&query=Thu%20Duc%2C%20Ho%20Chi%20Minh%20City"
-                  target="_blank"
-                  class="flex space-x-2 text-gray-300 hover:text-white transition-colors">
+                   target="_blank"
+                   class="flex space-x-2 text-gray-300 hover:text-white transition-colors">
                   <i class="fas fa-map-marker-alt h-6 mr-2 text-blue-400 animate-bounce"></i>
                   Thủ Đức, TP. HCM
                 </a>
                 <!-- Số điện thoại: tel -->
                 <div class="space-y-2 text-gray-300">
-                <!-- Zalo link -->
-                <a href="https://zalo.me/84363685180"
-                  target="_blank"
-                  class="flex items-center hover:text-white transition-colors">
-                  <img src="Image/Zalo.png" alt="Zalo Icon" class="h-6 w-6 mr-2 animate-bounce object-contain" style="max-width: 24px; max-height: 24px;">
-                  +84 36 3685 180 (Zalo)
-                </a>
-                <!-- Linkedin-->
-                <a href="https://linkedin.com/in/lethanhnha2003/" target="_blank" rel="noopener noreferrer"
-                  class="flex items-center hover:text-white transition-colors" aria-label="LinkedIn">
-                  <i class="fab fa-linkedin text-blue-400 h-6 w-6 mr-2 animate-bounce"></i>
-                  LinkedIn
-                </a>
-                <!-- Facebook -->
-                <a href="https://www.facebook.com/lethanhnhaLK10/" target="_blank" rel="noopener noreferrer"
-                  class="flex items-center hover:text-white transition-colors" aria-label="facebook">
-                  <i class="fab fa-facebook text-blue-400 h-6 w-6 mr-2 animate-bounce"></i>
-                  Facebook
-                </a>
-                <!-- Email: mailto -->
-                <a href="mailto:lethanhnha2507@gmail.com"
-                  class="flex items-center hover:text-white transition-colors">
-                  <i class="fas fa-envelope mr-2 text-blue-400 h-6 w-6 animate-bounce"></i>
-                  lethanhnha2507@gmail.com
-                </a>
+                  <!-- Zalo link -->
+                  <a href="https://zalo.me/84363685180"
+                     target="_blank"
+                     class="flex items-center hover:text-white transition-colors">
+                    <img src="Image/Zalo.png" alt="Zalo Icon" class="h-6 w-6 mr-2 animate-bounce object-contain" style="max-width: 24px; max-height: 24px;">
+                    +84 36 3685 180 (Zalo)
+                  </a>
+                  <!-- Linkedin-->
+                  <a href="https://linkedin.com/in/lethanhnha2003/" target="_blank" rel="noopener noreferrer"
+                     class="flex items-center hover:text-white transition-colors" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin text-blue-400 h-6 w-6 mr-2 animate-bounce"></i>
+                    LinkedIn
+                  </a>
+                  <!-- Facebook -->
+                  <a href="https://www.facebook.com/lethanhnhaLK10/" target="_blank" rel="noopener noreferrer"
+                     class="flex items-center hover:text-white transition-colors" aria-label="facebook">
+                    <i class="fab fa-facebook text-blue-400 h-6 w-6 mr-2 animate-bounce"></i>
+                    Facebook
+                  </a>
+                  <!-- Email: mailto -->
+                  <a href="mailto:lethanhnha2507@gmail.com"
+                     class="flex items-center hover:text-white transition-colors">
+                    <i class="fas fa-envelope mr-2 text-blue-400 h-6 w-6 animate-bounce"></i>
+                    lethanhnha2507@gmail.com
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -546,7 +540,6 @@
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/main.js"></script>
 </body>
