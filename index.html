@@ -1,546 +1,546 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" class="dark">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio | Lê Thanh Nhã</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lê Thanh Nhã — Automation & Control Engineer. Industrial automation, Lean manufacturing, PLC, SCADA, smart factory systems." />
+  <title>Lê Thanh Nhã | Automation & Control Engineer</title>
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- AOS CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/styles.css"/>
-  <!-- DotLottie Player -->
-  <script
-    src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
-    type="module"
-  ></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 </head>
 
-<body class="bg-gray-900 text-gray-200">
-  <!-- Header -->
-  <header class="bg-gray-900/80 backdrop-blur-md sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
-        <a href="#" class="text-2xl font-bold text-white">Lê Thanh Nhã</a>
-        <nav class="hidden md:flex space-x-8">
-          <a href="#skills" class="text-gray-300 hover:text-white transition-colors">Kỹ năng</a>
-          <a href="#experience" class="text-gray-300 hover:text-white transition-colors">Kinh nghiệm</a>
-          <a href="#education" class="text-gray-300 hover:text-white transition-colors">Học vấn</a>
-          <a href="#projects" class="text-gray-300 hover:text-white transition-colors">Dự án</a>
-          <a href="#certificate" class="text-gray-300 hover:text-white transition-colors">Chứng chỉ</a>
-          <a href="#activity" class="text-gray-300 hover:text-white transition-colors">Các hoạt động</a>
-          <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">Liên hệ</a>
-        </nav>
+<body>
+  <a href="#hero" class="skip-link">Chuyển tới nội dung chính</a>
 
-        <div class="flex items-center space-x-4">
-          <!-- Theme toggle button -->
-          <button id="theme-toggle" class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
-            <i id="theme-icon" class="fas fa-moon text-lg"></i>
-          </button>
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
 
-          <div class="md:hidden">
-            <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
-              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M4 6h16M4 12h16m-7 6h7" />
-              </svg>
-            </button>
-          </div>
-        </div>
+  <header class="site-header sticky top-0 z-50">
+    <div class="header-inner">
+      <a href="#hero" class="logo"><span class="logo-bracket">[</span> Lê Thanh Nhã <span class="logo-bracket">]</span></a>
+      <nav class="nav-desktop" aria-label="Điều hướng chính">
+        <a href="#about" class="nav-link">Giới thiệu</a>
+        <a href="#skills" class="nav-link">Kỹ năng</a>
+        <a href="#experience" class="nav-link">Kinh nghiệm</a>
+        <a href="#projects" class="nav-link">Dự án</a>
+        <a href="#education" class="nav-link">Học vấn</a>
+        <a href="#contact" class="nav-link nav-cta">Liên hệ</a>
+      </nav>
+      <div class="header-actions">
+        <button id="theme-toggle" type="button" aria-label="Bật chế độ sáng">
+          <i id="theme-icon" class="fas fa-sun" aria-hidden="true"></i>
+        </button>
+        <button id="mobile-menu-button" type="button" class="menu-toggle" aria-label="Mở menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
       </div>
     </div>
-    <div id="mobile-menu" class="md:hidden hidden">
-      <a href="#skills" class="block py-2 px-4 text-gray-300 hover:bg-gray-700">Kỹ năng</a>
-      <a href="#experience" class="block py-2 px-4 text-gray-300 hover:bg-gray-700">Kinh nghiệm</a>
-      <a href="#education" class="block py-2 px-4 text-gray-300 hover:bg-gray-700">Học vấn</a>
-      <a href="#projects" class="block py-2 px-4 text-gray-300 hover:bg-gray-700">Dự án</a>
-      <a href="#certificate" class="block py-2 px-4 text-gray-300 hover:bg-gray-700">Chứng chỉ</a>
-      <a href="#activity" class="block py-2 px-4 text-gray-300 hover:bg-gray-700">Các hoạt động</a>
-      <a href="#contact" class="block py-2 px-4 text-gray-300 hover:bg-gray-700">Liên hệ</a>
+    <div id="mobile-menu" class="mobile-menu hidden" role="navigation" aria-label="Menu di động">
+      <a href="#about">Giới thiệu</a>
+      <a href="#skills">Kỹ năng</a>
+      <a href="#experience">Kinh nghiệm</a>
+      <a href="#projects">Dự án</a>
+      <a href="#education">Học vấn</a>
+      <a href="#certificate">Chứng chỉ</a>
+      <a href="#activity">Hoạt động</a>
+      <a href="#contact" class="mobile-cta">Liên hệ</a>
     </div>
   </header>
 
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Hero Section -->
-    <section id="hero" class="relative h-screen overflow-hidden" data-aos="fade-up">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-        <!-- Text + Typed -->
-        <div class="text-center md:text-left">
-          <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-4">
-            <span id="typed"></span>
-          </h1>
-          <p class="text-lg text-gray-300 mb-6">
-            Chào các bạn tôi là Lê Thanh Nhã – một người đam mê tối ưu hóa quy trình sản xuất.
-          </p>
-          <div class="relative z-10 justify-center md:justify-start space-x-8 mb-6">
-            <!--Linkedin-->
-            <!-- <a href="https://linkedin.com/in/lethanhnha2003/" target="_blank" rel="noopener noreferrer"
-               class="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
-              <i class="fab fa-linkedin fa-2x"></i>
-            </a> -->
-            <!-- facebook -->
-            <!-- <a href="https://www.facebook.com/lethanhnhaLK10/" target="_blank" rel="noopener noreferrer"
-               class="text-gray-400 hover:text-white transition-colors" aria-label="facebook">
-              <i class="fab fa-facebook fa-2x"></i>
-            </a> -->
-            <!-- mail -->
-            <!-- <a href="mailto:lethanhnha2507@gmail.com" class="text-gray-400 hover:text-white transition-colors" aria-label="Email">
-              <i class="fas fa-envelope fa-2x"></i>
-            </a> -->
-          </div>
-          <!-- Scroll Indicator: đặt trực tiếp dưới section -->
-          <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
-            <a href="#skills" class="inline-block p-2 text-gray-400 hover:text-white transition-colors animate-bounce" aria-label="Scroll to skills">
-              <i class="fas fa-chevron-down fa-2x"></i>
-            </a>
-          </div>
-        </div>
-        <!-- Avatar -->
-        <div class="flex items-center justify-center">
-          <div class="profile-img-container">
-            <img src="Image/Myphoto.jpg" alt="Ảnh của Lê Thanh Nhã" class="profile-img">
-          </div>
-        </div>
-      </div>
-      <dotlottie-player
-        src="https://lottie.host/201af890-07a4-4c72-918d-5501130cff6e/jcUIvb1mYJ.lottie"
-        background="transparent"
-        speed="1"
-        class="absolute inset-0 w-full h-full object-cover opacity-30 filter brightness-75 blur-sm pointer-events-none"
-        loop
-        autoplay
-      ></dotlottie-player>
-    </section>
-
-    <!-- Robot -->
-    <!-- <section class="relative overflow-hidden -mt-16">
-        <div class="robot-container" data-aos="fade-up" data-aos-delay="300">
-            <dotlottie-player
+  <main class="site-main">
+    <!-- Hero + Robot Scene -->
+    <section id="hero" class="section-hero">
+      <div class="robot-scene" id="robot-scene" aria-hidden="true">
+        <div class="hero-robot-bg" id="hero-robot-bg">
+          <dotlottie-player
             src="https://lottie.host/201af890-07a4-4c72-918d-5501130cff6e/jcUIvb1mYJ.lottie"
             background="transparent"
-            speed="1"
+            speed="0.85"
+            class="hero-robot-bg__lottie"
             loop
             autoplay
-            ></dotlottie-player>
+          ></dotlottie-player>
         </div>
-    </section> -->
-
-    <!-- Skills Section -->
-    <section id="skills" class="relative py-20 bg-gradient-to-br from-blue-900 via-gray-900 to-black bg-opacity-50" data-aos="fade-up">
-      <div class="absolute inset-0 pointer-events-none">
-        <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="20%" cy="30%" r="200" fill="rgba(59,130,246,0.1)"/>
-          <rect x="60%" y="10%" width="300" height="300" fill="rgba(99,102,241,0.1)"/>
-          <!-- … -->
+        <div class="hero-ambient-glow" aria-hidden="true"></div>
+        <canvas id="particles-canvas" class="particles-canvas"></canvas>
+        <div class="robot-grid robot-grid--animated"></div>
+        <svg class="hero-circuit hero-circuit--animated" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="circuitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.5" />
+              <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.25" />
+            </linearGradient>
+          </defs>
+          <path class="circuit-path" d="M80 120 H280 V200 H480 M480 120 V320 M720 200 H920 V400 M280 320 V520 M80 520 H220" fill="none" stroke="url(#circuitGrad)" stroke-width="1.5" />
+          <path class="circuit-path circuit-path--delay" d="M1000 80 V240 H1100 M600 600 H800 V680 H1000" fill="none" stroke="url(#circuitGrad)" stroke-width="1" opacity="0.5" />
+          <circle class="circuit-node" cx="480" cy="120" r="4" fill="#22d3ee" />
+          <circle class="circuit-node" cx="920" cy="400" r="4" fill="#3b82f6" />
+          <circle class="circuit-node" cx="280" cy="520" r="4" fill="#22d3ee" />
         </svg>
+        <div class="hero-bg-overlay"></div>
       </div>
-      <div class="text-center">
-        <h2 class="text-3xl md:text-4xl font-bold text-white">Kỹ năng chuyên môn</h2>
-        <p class="mt-4 max-w-2xl mx-auto text-gray-400">
-          Tôi áp dụng kiến thức và kỹ năng của mình để giải quyết các bài toán thực tế trong công nghiệp.
+
+      <div class="hero-inner">
+        <div class="hero-content" data-aos="fade-right">
+          <div class="hud-corner hud-corner--tl" aria-hidden="true"></div>
+          <p class="section-label"><i class="fas fa-circle-notch fa-spin" aria-hidden="true"></i> Industry 4.0 · Smart Manufacturing</p>
+          <p class="hero-greeting">Xin chào — <strong>Lê Thanh Nhã</strong></p>
+          <h1 class="hero-headline font-display">Automation &amp; Control Engineer</h1>
+          <p class="hero-tagline">
+            Building smart industrial solutions through automation, software, industrial systems, and data-driven optimization.
+          </p>
+          <p class="hero-intro">
+            Kỹ sư kết hợp tư duy công nghiệp &amp; phần mềm — đam mê tự động hóa, Lean, nhà máy thông minh và tối ưu vận hành.
+          </p>
+          <p class="hero-typed"><span id="typed"></span></p>
+
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fas fa-rocket" aria-hidden="true"></i> View Projects
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <i class="fas fa-paper-plane" aria-hidden="true"></i> Contact Me
+            </a>
+          </div>
+
+          <div class="hero-social">
+            <a href="https://linkedin.com/in/lethanhnha2003/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/lethanhnhaLK10/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="mailto:lethanhnha2507@gmail.com" class="social-btn" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <div class="hero-visual" data-aos="zoom-in" data-aos-delay="120">
+          <div class="profile-frame">
+            <div class="profile-card">
+              <img src="Image/Myphoto.jpg" alt="Lê Thanh Nhã" width="400" height="500" />
+            </div>
+            <span class="profile-float profile-float-1"><i class="fas fa-microchip"></i> PLC</span>
+            <span class="profile-float profile-float-2"><i class="fas fa-chart-line"></i> OEE</span>
+            <span class="profile-float profile-float-3"><i class="fas fa-robot"></i> Industry 4.0</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-indicator" aria-label="Scroll to about">
+        <span class="scroll-indicator-text">SCROLL</span>
+        <i class="fas fa-chevron-down"></i>
+      </a>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section" data-aos="fade-up">
+      <div class="section-header">
+        <span class="section-label">Giới thiệu</span>
+        <h2 class="section-title">Kỹ sư đa lĩnh vực</h2>
+        <p class="section-subtitle">
+          Kết hợp kỹ thuật công nghiệp, tự động hóa và phát triển phần mềm để xây dựng hệ thống sản xuất thông minh, hiệu quả và bền vững.
         </p>
       </div>
-      <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Card 1 -->
-        <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-2">
-          <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white">
-            <i class="fa-solid fa-robot fa-xl"></i>
-          </div>
-          <h3 class="mt-6 text-xl font-bold text-white">Lập trình & Điều khiển</h3>
-          <p class="mt-2 text-gray-400">Lập trình PLC cho hệ thống tự động, phát triển phần mềm điều khiển và giám sát trên WinForms C#.</p>
-        </div>
-        <!-- Card 2 -->
-        <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-2">
-          <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white">
-            <i class="fa-solid fa-ruler-combined fa-xl"></i>
-          </div>
-          <h3 class="mt-6 text-xl font-bold text-white">Thiết kế Cơ khí & Mạch</h3>
-          <p class="mt-2 text-gray-400">Thiết kế mô hình 3D với SolidWorks, bản vẽ 2D AutoCAD và mạch điện công nghiệp.</p>
-        </div>
-        <!-- Card 3 -->
-        <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-2">
-          <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white">
-            <i class="fa-solid fa-chart-line fa-xl"></i>
-          </div>
-          <h3 class="mt-6 text-xl font-bold text-white">Phân tích & Mô phỏng</h3>
-          <p class="mt-2 text-gray-400">Sử dụng Python và Matlab để phân tích dữ liệu, xây dựng thuật toán và mô phỏng hệ thống điều khiển.</p>
-        </div>
-      </div>
 
-      <!-- Technology Icons -->
-      <div class="mt-20 text-center">
-        <h3 class="text-2xl md:text-3xl font-bold text-white">Công cụ & Công nghệ</h3>
-        <div class="mt-10 flex flex-wrap justify-center items-center gap-8 md:gap-12">
-          <div class="flex flex-col items-center group">
-            <img src="Image/imgPLC.jpg" alt="PLC Programming" class="h-16 w-16 object-contain transition-transform duration-300 group-hover:scale-110">
-            <span class="mt-3 text-sm font-medium text-gray-400 group-hover:text-white">PLC</span>
-          </div>
-          <div class="flex flex-col items-center group">
-            <img src="Image/CLogo.png" alt="C# Programming" class="h-16 w-16 object-contain transition-transform duration-300 group-hover:scale-110">
-            <span class="mt-3 text-sm font-medium text-gray-400 group-hover:text-white">C#</span>
-          </div>
-          <div class="flex flex-col items-center group">
-            <img src="Image/SolidworksLogo.png" alt="SolidWorks" class="h-16 w-16 object-contain transition-transform duration-300 group-hover:scale-110">
-            <span class="mt-3 text-sm font-medium text-gray-400 group-hover:text-white">SolidWorks</span>
-          </div>
-          <div class="flex flex-col items-center group">
-            <img src="Image/Autocad.png" alt="AutoCAD" class="h-16 w-16 object-contain transition-transform duration-300 group-hover:scale-110">
-            <span class="mt-3 text-sm font-medium text-gray-400 group-hover:text-white">AutoCAD</span>
-          </div>
-          <div class="flex flex-col items-center group">
-            <img src="Image/python.png" alt="Python" class="h-16 w-16 object-contain transition-transform duration-300 group-hover:scale-110">
-            <span class="mt-3 text-sm font-medium text-gray-400 group-hover:text-white">Python</span>
-          </div>
-          <div class="flex flex-col items-center group">
-            <img src="Image/matlab.png" alt="Matlab" class="h-16 w-16 object-contain transition-transform duration-300 group-hover:scale-110">
-            <span class="mt-3 text-sm font-medium text-gray-400 group-hover:text-white">Matlab</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="py-20 section-fade-in" data-aos="fade-up">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-white">Kinh nghiệm</h2>
-        <p class="mt-4 max-w-2xl mx-auto text-gray-400">Những vị trí tôi đã đảm nhiệm và đóng góp chính.</p>
-      </div>
-      <div class="relative max-w-3xl mx-auto">
-        <div class="absolute left-4 top-0 h-full w-0.5 bg-gray-700"></div>
-        <!-- Accordion Item 1 -->
-        <div class="relative pl-12 mb-12"
-             data-aos="fade-right"
-             data-aos-duration="600">
-          <div class="absolute left-4 top-1 w-4 h-4 bg-blue-500 rounded-full border-4 border-gray-900"></div>
-          <p class="text-sm text-gray-400">07/2024 – Hiện tại</p>
-          <h3 class="text-xl font-bold text-white mt-1">Factory Operation Development</h3>
-          <p class="text-gray-300">FYN Group</p>
-          <ul class="mt-3 list-disc list-inside text-gray-400 space-y-1">
-            <li>Nâng cấp và cấu hình dây chuyền sản xuất để tăng năng suất.</li>
-            <li>Thiết kế dụng cụ hỗ trợ công nhân sản xuất.</li>
-          </ul>
-        </div>
-        <!-- Accordion Item 2 -->
-        <div class="relative pl-12 mb-12"
-             data-aos="fade-right"
-             data-aos-duration="600"
-             data-aos-delay="200">
-          <div class="absolute left-4 top-1 w-4 h-4 bg-blue-500 rounded-full border-4 border-gray-900"></div>
-          <p class="text-sm text-gray-400">05/2023 – 07/2023</p>
-          <h3 class="text-xl font-bold text-white mt-1">IT Helper</h3>
-          <p class="text-gray-300">VTS Technology</p>
-          <ul class="mt-3 list-disc list-inside text-gray-400 space-y-1">
-            <li>Hỗ trợ phát triển phần mềm quản lý nhân viên bằng WinForms C#.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="py-20 section-fade-in" data-aos="fade-up">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-white">Học vấn</h2>
-        <p class="mt-4 max-w-2xl mx-auto text-gray-400">Quá trình học tập của tôi.</p>
-      </div>
-      <div class="relative max-w-3xl mx-auto"
-           data-aos="fade-right"
-           data-aos-duration="600">
-        <div class="absolute left-4 top-0 h-full w-0.5 bg-gray-700"></div>
-        <div class="relative pl-12 mb-12">
-          <div class="absolute left-4 top-1 w-4 h-4 bg-blue-500 rounded-full border-4 border-gray-900"></div>
-          <p class="text-sm text-gray-400">2021 - 2025</p>
-          <h3 class="text-xl font-bold text-white mt-1">Kỹ thuật Điều khiển và Tự động hóa</h3>
-          <p class="text-md text-gray-300">Đại học Bách Khoa TP.HCM</p>
-          <ul class="mt-3 list-disc list-inside text-gray-400">
-            <li>GPA: 3.2/4.0</li>
-            <li>TOEIC Nghe & Đọc: 715.</li>
+      <div class="about-grid">
+        <div class="about-content glass-panel" data-aos="fade-right">
+          <p>
+            Tôi là <strong>Automation &amp; Control Engineer</strong> với nền tảng vững về điều khiển tự động, cơ điện và phần mềm công nghiệp.
+            Tôi đam mê <strong>Industry 4.0</strong>, tối ưu quy trình Lean và xây dựng giải pháp tích hợp giữa nhà máy và hệ thống số.
+          </p>
+          <ul class="about-roles">
+            <li><i class="fas fa-check-circle"></i> Kỹ sư Điều khiển &amp; Tự động hóa</li>
+            <li><i class="fas fa-check-circle"></i> Chuyên gia tối ưu Lean &amp; quy trình</li>
+            <li><i class="fas fa-check-circle"></i> Nhà phát triển hệ thống công nghiệp</li>
+            <li><i class="fas fa-check-circle"></i> Kiến trúc sư giải pháp automation &amp; phần mềm</li>
+            <li><i class="fas fa-check-circle"></i> Kỹ sư giải quyết bài toán kỹ thuật đa lĩnh vực</li>
           </ul>
         </div>
 
-        <div class="relative pl-12 mb-12"
-             data-aos="fade-right"
-             data-aos-duration="600"
-             data-aos-delay="200">
-          <div class="absolute left-4 top-1 w-4 h-4 bg-blue-500 rounded-full border-4 border-gray-900"></div>
-          <p class="text-sm text-gray-400">2018 - 2021</p>
-          <h3 class="text-xl font-bold text-white mt-1">Trung Học Phổ Thông Chuyên Nguyễn Quang Diêu - Đồng Tháp</h3>
-          <p class="text-md text-gray-300">Chuyên Lý Khóa 10</p>
-          <ul class="mt-3 list-disc list-inside text-gray-400">
-            <li>GPA: 3.2/4.0</li>
-          </ul>
+        <div class="stats-grid" data-aos="fade-left">
+          <article class="stat-card glass-panel">
+            <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+            <span class="stat-number" data-count="12">0</span>
+            <span class="stat-label">Engineering Projects</span>
+          </article>
+          <article class="stat-card glass-panel">
+            <div class="stat-icon"><i class="fas fa-microchip"></i></div>
+            <span class="stat-number" data-count="8">0</span>
+            <span class="stat-label">Automation Systems</span>
+          </article>
+          <article class="stat-card glass-panel">
+            <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
+            <span class="stat-number" data-count="15">0</span>
+            <span class="stat-label">Optimization Solutions</span>
+          </article>
+          <article class="stat-card glass-panel">
+            <div class="stat-icon"><i class="fas fa-laptop-code"></i></div>
+            <span class="stat-number" data-count="6">0</span>
+            <span class="stat-label">Software Systems</span>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 section-fade-in" data-aos="fade-up">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-white">Dự án tiêu biểu</h2>
-        <p class="mt-4 max-w-2xl mx-auto text-gray-400">Các dự án tôi đã thực hiện.</p>
+    <!-- Skills -->
+    <section id="skills" class="section" data-aos="fade-up">
+      <div class="section-header">
+        <span class="section-label">Chuyên môn</span>
+        <h2 class="section-title">Kỹ năng cốt lõi</h2>
+        <p class="section-subtitle">Năng lực đa chiều từ nhà máy đến hệ thống phần mềm.</p>
       </div>
-      <div class="flex flex-wrap justify-center gap-6">
-        <!-- Project 1 -->
-        <div class="flex justify-center">
-          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300 max-w-md">
-            <img src="Image\Wincc.png"
-                 alt="Simatic WinCC" class="w-full h-48 object-cover">
-            <div class="p-6">
-              <h3 class="text-xl font-bold text-white">Simatic WinCC Unified Plant Intelligence</h3>
-              <p class="mt-2 text-gray-400">Mô phỏng trạng thái hoạt động, lên lịch hoạt động, thiết lập các KPI, tính toán OEE.</p>
-              <div class="mt-4 flex flex-wrap gap-2">
-                <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">PLC</span>
-                <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">WinCC Unified</span>
-              </div>
-              <div class="mt-6 flex">
-                <a href="https://github.com/NhaLe2003/Project1"
-                   target="_blank" rel="noopener noreferrer"
-                   class="inline-flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors animate-jump" aria-label="Xem trên GitHub">
-                  <i class="fas fa-hand-point-right text-xl transition-transform duration-300 group-hover:translate-x-1"></i>
-                  <span class="relative transition-transform duration-300 group-hover:scale-105">
-                    Xem trên GitHub
-                  </span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Project 2 -->
-        <div class="flex justify-center">
-          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300 max-w-md">
-            <img src="Image\ArticulatedRobot.png"
-                 alt="ArticulatedRobot" class="w-full h-48 object-cover">
-            <div class="p-6">
-              <h3 class="text-xl font-bold text-white">RoBot</h3>
-              <p class="mt-2 text-gray-400">Mô phỏng Robot Articulated 3 bậc tự do. Forward, Invert, Planning.</p>
-              <div class="mt-4 flex flex-wrap gap-2">
-                <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">Matlab</span>
-                <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">Matlab Guide</span>
-              </div>
-              <div class="mt-6 flex">
-                <a href="https://github.com/NhaLe2003/ArticulatedRobot"
-                   target="_blank" rel="noopener noreferrer"
-                   class="inline-flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors animate-jump" aria-label="Xem trên GitHub">
-                  <i class="fas fa-hand-point-right text-xl transition-transform duration-300 group-hover:translate-x-1"></i>
-                  <span class="relative transition-transform duration-300 group-hover:scale-105">
-                    Xem trên GitHub
-                  </span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <!-- Project 3 -->
-        <div class="flex justify-center">
-          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300 max-w-md">
-            <img src="Image\ArticulatedRobot.png"
-                 alt="Simatic WinCC" class="w-full h-48 object-cover">
-            <div class="p-6">
-              <h3 class="text-xl font-bold text-white">Capstone Project</h3>
-              <p class="mt-2 text-gray-400">Ứng dụng AI và WinCC Unified trong giám sát hiệu suất sản xuất (OEE) đa Line</p>
-              <div class="mt-4 flex flex-wrap gap-2">
-                <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">PLC</span>
-                <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">Wincc Unified</span>
-                <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">C#</span>
-                <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">MongoDb</span>
-                <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">HTML/CSS</span>
-              </div>
-              <div class="mt-6 flex space-x-4">
-                <a href="https://github.com/NhaLe2003/CapStoneProject"
-                   target="_blank" rel="noopener noreferrer"
-                   class="inline-flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors animate-jump" aria-label="Xem trên GitHub">
-                  <i class="fas fa-hand-point-right text-xl transition-transform duration-300 group-hover:translate-x-1"></i>
-                  <span class="relative transition-transform duration-300 group-hover:scale-105">
-                    Xem trên GitHub
-                  </span>
-                </a>
-              </div>
-            </div>
+      <div class="skills-grid">
+        <article class="card card-glow-border skill-card" data-aos="fade-up">
+          <div class="skill-icon"><i class="fas fa-industry"></i></div>
+          <h3>Industrial Automation</h3>
+          <p>PLC, Siemens TIA Portal, WinCC Unified, SCADA và hệ thống giám sát nhà máy.</p>
+          <div class="skill-tags">
+            <span class="tag">PLC</span><span class="tag">TIA Portal</span><span class="tag">WinCC</span><span class="tag">SCADA</span>
           </div>
-        </div>
+        </article>
+        <article class="card card-glow-border skill-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="skill-icon"><i class="fas fa-warehouse"></i></div>
+          <h3>Industrial Engineering</h3>
+          <p>Lean Manufacturing, 5S, Kaizen và tối ưu kho bãi, luồng vật liệu.</p>
+          <div class="skill-tags">
+            <span class="tag">Lean</span><span class="tag">5S</span><span class="tag">Kaizen</span><span class="tag">Warehouse</span>
+          </div>
+        </article>
+        <article class="card card-glow-border skill-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+          <h3>Software Development</h3>
+          <p>Ứng dụng desktop C#, WinForms, SQL Server và Python cho hệ thống quản trị.</p>
+          <div class="skill-tags">
+            <span class="tag">C#</span><span class="tag">WinForms</span><span class="tag">SQL Server</span><span class="tag">Python</span>
+          </div>
+        </article>
+        <article class="card card-glow-border skill-card" data-aos="fade-up" data-aos-delay="240">
+          <div class="skill-icon"><i class="fas fa-drafting-compass"></i></div>
+          <h3>Engineering Design</h3>
+          <p>Thiết kế cơ khí, bản vẽ AutoCAD, SolidWorks và thiết kế hệ thống.</p>
+          <div class="skill-tags">
+            <span class="tag">AutoCAD</span><span class="tag">SolidWorks</span><span class="tag">System Design</span>
+          </div>
+        </article>
+        <article class="card card-glow-border skill-card" data-aos="fade-up" data-aos-delay="320">
+          <div class="skill-icon"><i class="fas fa-sitemap"></i></div>
+          <h3>Systems &amp; Optimization</h3>
+          <p>Phân tích workflow, cải tiến quy trình, dữ liệu vận hành và tối ưu hiệu suất công nghiệp.</p>
+          <div class="skill-tags">
+            <span class="tag">Workflow</span><span class="tag">Process Improvement</span><span class="tag">Industrial Data</span><span class="tag">OEE</span>
+          </div>
+        </article>
       </div>
     </section>
 
-    <!-- Certificate Section -->
-    <section id="certificate" class="py-20 section-fade-in" data-aos="fade-up">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-white">Chứng chỉ</h2>
-        <p class="mt-4 max-w-2xl mx-auto text-gray-400">Các chứng chỉ tôi đã đạt được.</p>
+    <!-- Experience -->
+    <section id="experience" class="section section--alt" data-aos="fade-up">
+      <div class="section-header">
+        <span class="section-label">Sự nghiệp</span>
+        <h2 class="section-title">Kinh nghiệm làm việc</h2>
+        <p class="section-subtitle">Hành trình phát triển từ phần mềm quản trị đến tối ưu nhà máy và kỹ thuật công nghiệp.</p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Certificate 1 -->
-        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
-          <img src="Image\z5480404813667_619ea644e030cb49a8420c82dc65b2bc.jpg" alt="Chứng chỉ Toeic" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-white">Toeic Reading and Listening</h3>
-            <p class="mt-2 text-gray-400">715/990</p>
+
+      <div class="work-timeline">
+        <div class="work-timeline-rail" aria-hidden="true"></div>
+
+        <article class="work-item work-item--current" data-aos="fade-up">
+          <div class="work-marker"><i class="fas fa-bolt"></i></div>
+          <div class="card work-card glass-panel">
+            <div class="work-meta">
+              <span class="timeline-date">Feb 2026 – Present</span>
+              <span class="work-type">Full-time</span>
+            </div>
+            <h3 class="timeline-role">Electrical Engineer</h3>
+            <p class="timeline-org"><i class="fas fa-building"></i> HTG ENGINEERING AND TRADING JOINT STOCK COMPANY</p>
+            <p class="exp-location"><i class="fas fa-map-marker-alt"></i> Ho Chi Minh City, Vietnam</p>
+            <p class="exp-summary">Working on electrical and industrial engineering projects, supporting technical implementation, system design, and practical engineering solutions.</p>
+            <div class="exp-tags">
+              <span class="tag">Electrical Systems</span><span class="tag">Industrial Engineering</span><span class="tag">System Design</span>
+            </div>
           </div>
-        </div>
-        <!-- Certificate 2 -->
-        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
-          <img src="Image\UC-12fbaa28-4773-44fc-9702-f1bba3628b7f.jpg" alt="Chứng chỉ Matlab" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-white">MATLAB Master Class: Go from Beginner to Expert in MATLAB</h3>
-            <p class="mt-2 text-gray-400">Udemy</p>
+        </article>
+
+        <article class="work-item" data-aos="fade-up" data-aos-delay="80">
+          <div class="work-marker"><i class="fas fa-warehouse"></i></div>
+          <div class="card work-card glass-panel">
+            <div class="work-meta">
+              <span class="timeline-date">Jun 2025 – Feb 2026</span>
+              <span class="work-type">Full-time</span>
+            </div>
+            <h3 class="timeline-role">Mechanical Engineer</h3>
+            <p class="timeline-org"><img src="Image/FYNLogo.png" alt="" class="exp-logo" width="24" height="24" /> FYN GROUP – Master Cost Killer</p>
+            <ul class="timeline-list">
+              <li>Researched and developed Lean, 5S, and Kaizen tools for continuous improvement initiatives.</li>
+              <li>Designed standardized visual management systems, 5S tools, and operational checklists.</li>
+              <li>Studied and optimized warehouse layouts based on Lean and 5S principles.</li>
+              <li>Improved warehouse operations including receiving, storage, picking, and shipping.</li>
+              <li>Analyzed material flow, space utilization, traceability, and operational efficiency.</li>
+            </ul>
+            <div class="exp-tags">
+              <span class="tag">Problem Solving</span><span class="tag">SOLIDWORKS</span><span class="tag">Lean</span><span class="tag">5S</span><span class="tag">Kaizen</span><span class="tag">Warehouse Optimization</span>
+            </div>
           </div>
-        </div>
-        <!-- Certificate 3 -->
-        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
-          <img src="Image\Screenshot 2025-06-26 095250.png" alt="Chứng chỉ Python" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-white">Data Analysis with Python</h3>
-            <p class="mt-2 text-gray-400">Free Code Camp</p>
+        </article>
+
+        <article class="work-item" data-aos="fade-up" data-aos-delay="160">
+          <div class="work-marker"><i class="fas fa-industry"></i></div>
+          <div class="card work-card glass-panel">
+            <div class="work-meta">
+              <span class="timeline-date">Jul 2024 – Dec 2025</span>
+              <span class="work-type">Internship</span>
+            </div>
+            <h3 class="timeline-role">Factory Operations Development</h3>
+            <p class="timeline-org"><img src="Image/FYNLogo.png" alt="" class="exp-logo" width="24" height="24" /> FYN GROUP – Master Cost Killer</p>
+            <p class="exp-summary">Focused on optimizing production operations by combining process analysis, mechanical design, and practical factory implementation.</p>
+            <div class="exp-tags">
+              <span class="tag">SOLIDWORKS</span><span class="tag">PLC Programming</span><span class="tag">Process Analysis</span><span class="tag">Factory Operations</span>
+            </div>
           </div>
-        </div>
+        </article>
+
+        <article class="work-item" data-aos="fade-up" data-aos-delay="240">
+          <div class="work-marker"><i class="fas fa-laptop-code"></i></div>
+          <div class="card work-card glass-panel">
+            <div class="work-meta">
+              <span class="timeline-date">May 2023 – Jul 2023</span>
+              <span class="work-type">Part-time</span>
+            </div>
+            <h3 class="timeline-role">IT Helper</h3>
+            <p class="timeline-org"><img src="Image/VTStekLogo.png" alt="" class="exp-logo" width="24" height="24" /> VTStek Technology Joint Stock Company</p>
+            <p class="exp-location"><i class="fas fa-map-marker-alt"></i> Dong Nai, Vietnam</p>
+            <ul class="timeline-list">
+              <li>Contributed to the development of a desktop application using WinForms (C#) and SQL Server.</li>
+              <li>Designed and implemented user interfaces for the internal management system.</li>
+              <li>Developed modules for employee data management and maintained data integrity through SQL Server.</li>
+              <li>Built business logic flows for stock-in and stock-out operations.</li>
+              <li>Implemented a role-based order approval process.</li>
+              <li>Collaborated with team members to optimize system performance, enhance user experience, and ensure data security.</li>
+            </ul>
+            <div class="exp-tags">
+              <span class="tag">WinForms</span><span class="tag">C#</span><span class="tag">SQL Server</span>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
-    <!-- Activity Section -->
-    <section id="activity" class="py-20 section-fade-in" data-aos="fade-up">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-white">Các hoạt động</h2>
-        <p class="mt-4 max-w-2xl mx-auto text-gray-400">Những hoạt động ngoại khóa và đóng góp của tôi.</p>
+    <!-- Projects -->
+    <section id="projects" class="section" data-aos="fade-up">
+      <div class="section-header">
+        <span class="section-label">Portfolio</span>
+        <h2 class="section-title">Dự án tiêu biểu</h2>
+        <p class="section-subtitle">PLC, SCADA, smart factory, robot simulation và hệ thống phần mềm công nghiệp.</p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Activity 1 -->
-        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
-          <img src="Image\483763158_9361457863946651_5463142257621129948_n.jpg" alt="Hoạt động 1" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-white">Thành viên CLB BKFC</h3>
-            <p class="mt-2 text-gray-400">Thành viên ban truyền thông.</p>
-            <p class="mt-2 text-gray-400">Tham gia các hoạt động tư vấn tuyển sinh tại trường Đại Học Bách Khoa.</p>
+
+      <div class="projects-layout">
+        <article class="card card-glow-border project-card project-card--featured" data-aos="fade-up">
+          <div class="card-media">
+            <img src="Image/Wincc.png" alt="Capstone — Smart Factory OEE" loading="lazy" />
+            <div class="project-overlay"><span class="project-cat">Smart Factory · AI</span></div>
           </div>
-        </div>
-        <!-- Activity 2 -->
-        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
-          <img src="Image\452931261_994877705975594_6983130677840463706_n.jpg" alt="Hoạt động 2" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-white">Thành viên CLB BKRA và Fablab</h3>
-            <p class="mt-2 text-gray-400">Thành viên nhóm lập trình Backend.</p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">C#</span>
-              <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">MSSQL</span>
-              <span class="text-xs font-semibold bg-blue-900/50 text-blue-300 py-1 px-3 rounded-full">PLC</span>
+          <div class="card-body">
+            <span class="badge-featured"><i class="fas fa-star"></i> Capstone · Featured</span>
+            <h3>Capstone Project — Multi-Line OEE Monitoring</h3>
+            <p>Ứng dụng AI và WinCC Unified giám sát hiệu suất sản xuất (OEE) đa Line — dashboard công nghiệp thông minh.</p>
+            <div class="tag-row">
+              <span class="tag">PLC</span><span class="tag">WinCC Unified</span><span class="tag">C#</span><span class="tag">MongoDB</span><span class="tag">AI</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/NhaLe2003/CapStoneProject" target="_blank" rel="noopener noreferrer" class="btn-github"><i class="fab fa-github"></i> GitHub</a>
             </div>
           </div>
-        </div>
-        <!-- Activity 3 -->
-        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
-          <img src="Image\IMG_2651.JPG" alt="Hoạt động 3" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-white">Tham gia tình nguyện "Ngược dòng Châu Mạ"</h3>
-            <p class="mt-2 text-gray-400">Giúp đỡ, tạo sân chơi cho các em nhỏ vùng Tây Nguyên.</p>
+        </article>
+
+        <article class="card card-glow-border project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-media">
+            <img src="Image/Wincc.png" alt="WinCC Unified Plant Intelligence" loading="lazy" />
+            <div class="project-overlay"><span class="project-cat">SCADA · OEE</span></div>
           </div>
-        </div>
+          <div class="card-body">
+            <h3>Simatic WinCC Unified Plant Intelligence</h3>
+            <p>Mô phỏng trạng thái, lên lịch vận hành, thiết lập KPI và tính toán OEE trên SCADA.</p>
+            <div class="tag-row"><span class="tag">PLC</span><span class="tag">WinCC Unified</span><span class="tag">KPI</span></div>
+            <div class="project-actions">
+              <a href="https://github.com/NhaLe2003/Project1" target="_blank" rel="noopener noreferrer" class="btn-github"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card card-glow-border project-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-media">
+            <img src="Image/ArticulatedRobot.png" alt="Articulated Robot Simulation" loading="lazy" />
+            <div class="project-overlay"><span class="project-cat">Robotics · Matlab</span></div>
+          </div>
+          <div class="card-body">
+            <h3>Articulated Robot Simulation</h3>
+            <p>Mô phỏng robot 3 bậc tự do — Forward/Inverse kinematics và path planning.</p>
+            <div class="tag-row"><span class="tag">Matlab</span><span class="tag">Matlab Guide</span><span class="tag">Simulation</span></div>
+            <div class="project-actions">
+              <a href="https://github.com/NhaLe2003/ArticulatedRobot" target="_blank" rel="noopener noreferrer" class="btn-github"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="relative py-20 bg-gray-950 overflow-hidden">
-      <!-- Background Layer: Gradient + Decorative SVG -->
-      <div class="absolute inset-0 z-0 pointer-events-none">
-        <!-- Gradient background -->
-        <div class="w-full h-full bg-gradient-to-tr from-blue-950 via-gray-950 to-indigo-950 opacity-90"></div>
-        <!-- SVG decorative shape (waves) -->
-        <svg class="absolute top-0 left-0 w-full h-32 md:h-40 opacity-40" viewBox="0 0 1440 320" preserveAspectRatio="none">
-          <path fill="#2563eb" fill-opacity="1" d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,133.3C840,107,960,85,1080,101.3C1200,117,1320,171,1380,197.3L1440,224L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
-        </svg>
-        <!-- Right-side animated background effect (blurred blob) -->
-        <div class="hidden md:block absolute right-0 top-1/3 w-60 h-60 lg:w-80 lg:h-80 bg-blue-600 opacity-30 rounded-full blur-3xl animate-pulse"></div>
+    <!-- Education -->
+    <section id="education" class="section section--alt" data-aos="fade-up">
+      <div class="section-header">
+        <span class="section-label">Học tập</span>
+        <h2 class="section-title">Học vấn</h2>
+        <p class="section-subtitle">Nền tảng kỹ thuật điều khiển tự động hóa và tư duy kỹ thuật.</p>
       </div>
-      <div class="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 z-10">
-        <!-- Card Contact -->
-        <div class="relative rounded-lg overflow-hidden shadow-lg bg-transparent">
-          <div class="absolute inset-0 w-full h-full flex items-center justify-center">
-            <img 
-              src="Image/Contact.jpg" 
-              alt="Contact background"
-              class="w-full max-w-[400px] md:max-w-[600px] h-[220px] md:h-[320px] lg:h-[400px] object-cover object-center rounded-lg opacity-50 mx-auto"
-              style="object-fit: cover; filter: blur(1px);"
-            />
+      <div class="timeline">
+        <div class="timeline-rail" aria-hidden="true"></div>
+        <article class="timeline-item" data-aos="fade-up">
+          <div class="timeline-marker"><i class="fas fa-graduation-cap"></i></div>
+          <div class="card timeline-card glass-panel">
+            <span class="timeline-date">2021 – 2025</span>
+            <h3 class="timeline-role">Kỹ thuật Điều khiển và Tự động hóa</h3>
+            <p class="timeline-org"><i class="fas fa-university"></i> Đại học Bách Khoa TP.HCM</p>
+            <ul class="timeline-list"><li>GPA: 3.2/4.0</li><li>TOEIC Nghe &amp; Đọc: 715</li></ul>
           </div>
-          <!-- Removed the black overlay here to avoid double dark background -->
-          <div class="relative z-10 h-full flex items-center justify-center p-8">
-            <div class="text-center space-y-4">
-              <dotlottie-player
-                src="https://lottie.host/9048dc0e-b5f6-46f6-adc6-8c560f35a936/KR3GXXTXA3.lottie"
-                background="transparent"
-                speed="1"
-                style="width: 120px; height: 120px; margin: 0 auto;"
-                loop
-                autoplay
-                class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/3 opacity-70 z-0 pointer-events-none"
-              ></dotlottie-player>
-              <span class="inline-block bg-blue-600 text-white font-semibold px-4 py-1 rounded">
-                CONTACT ME
-              </span>
-              <p class="mt-4 max-w-xl mx-auto text-gray-400">
-                Tôi luôn sẵn sàng lắng nghe các cơ hội hợp tác hoặc chỉ đơn giản là một cuộc trò chuyện.
-              </p>
-              <p class="text-xl font-bold text-white">Lê Thanh Nhã</p>
-              <p class="text-gray-300 font-bold">Kỹ sư Điều khiển & Tự động hóa</p>
-              <div class="space-y-2 text-gray-300">
-                <!-- Địa chỉ: link tới Google Maps -->
-                <a href="https://www.google.com/maps/search/?api=1&query=Thu%20Duc%2C%20Ho%20Chi%20Minh%20City"
-                   target="_blank"
-                   class="flex space-x-2 text-gray-300 hover:text-white transition-colors">
-                  <i class="fas fa-map-marker-alt h-6 mr-2 text-blue-400 animate-bounce"></i>
-                  Thủ Đức, TP. HCM
-                </a>
-                <!-- Số điện thoại: tel -->
-                <div class="space-y-2 text-gray-300">
-                  <!-- Zalo link -->
-                  <a href="https://zalo.me/84363685180"
-                     target="_blank"
-                     class="flex items-center hover:text-white transition-colors">
-                    <img src="Image/Zalo.png" alt="Zalo Icon" class="h-6 w-6 mr-2 animate-bounce object-contain" style="max-width: 24px; max-height: 24px;">
-                    +84 36 3685 180 (Zalo)
-                  </a>
-                  <!-- Linkedin-->
-                  <a href="https://linkedin.com/in/lethanhnha2003/" target="_blank" rel="noopener noreferrer"
-                     class="flex items-center hover:text-white transition-colors" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin text-blue-400 h-6 w-6 mr-2 animate-bounce"></i>
-                    LinkedIn
-                  </a>
-                  <!-- Facebook -->
-                  <a href="https://www.facebook.com/lethanhnhaLK10/" target="_blank" rel="noopener noreferrer"
-                     class="flex items-center hover:text-white transition-colors" aria-label="facebook">
-                    <i class="fab fa-facebook text-blue-400 h-6 w-6 mr-2 animate-bounce"></i>
-                    Facebook
-                  </a>
-                  <!-- Email: mailto -->
-                  <a href="mailto:lethanhnha2507@gmail.com"
-                     class="flex items-center hover:text-white transition-colors">
-                    <i class="fas fa-envelope mr-2 text-blue-400 h-6 w-6 animate-bounce"></i>
-                    lethanhnha2507@gmail.com
-                  </a>
-                </div>
-              </div>
-            </div>
+        </article>
+        <article class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="timeline-marker"><i class="fas fa-school"></i></div>
+          <div class="card timeline-card glass-panel">
+            <span class="timeline-date">2018 – 2021</span>
+            <h3 class="timeline-role">THPT Chuyên Nguyễn Quang Diêu — Đồng Tháp</h3>
+            <p class="timeline-org"><i class="fas fa-book"></i> Chuyên Lý Khóa 10</p>
+            <ul class="timeline-list"><li>GPA: 3.2/4.0</li></ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Certificates -->
+    <section id="certificate" class="section" data-aos="fade-up">
+      <div class="section-header">
+        <span class="section-label">Chứng nhận</span>
+        <h2 class="section-title">Chứng chỉ</h2>
+        <p class="section-subtitle">Chứng nhận kỹ năng kỹ thuật và phân tích dữ liệu.</p>
+      </div>
+      <div class="cards-grid">
+        <article class="card card-glow-border media-card" data-aos="fade-up">
+          <div class="card-media"><img src="Image/z5480404813667_619ea644e030cb49a8420c82dc65b2bc.jpg" alt="TOEIC" loading="lazy" /></div>
+          <div class="card-body">
+            <div class="media-card-icon"><i class="fas fa-language"></i></div>
+            <h3>TOEIC Reading and Listening</h3>
+            <p><span class="tag">715/990</span></p>
+          </div>
+        </article>
+        <article class="card card-glow-border media-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-media"><img src="Image/UC-12fbaa28-4773-44fc-9702-f1bba3628b7f.jpg" alt="MATLAB" loading="lazy" /></div>
+          <div class="card-body">
+            <div class="media-card-icon"><i class="fas fa-square-root-variable"></i></div>
+            <h3>MATLAB Master Class</h3>
+            <p>Udemy — Beginner to Expert</p>
+          </div>
+        </article>
+        <article class="card card-glow-border media-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-media"><img src="Image/Screenshot 2025-06-26 095250.png" alt="Python" loading="lazy" /></div>
+          <div class="card-body">
+            <div class="media-card-icon"><i class="fab fa-python"></i></div>
+            <h3>Data Analysis with Python</h3>
+            <p>freeCodeCamp</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Activities -->
+    <section id="activity" class="section section--alt" data-aos="fade-up">
+      <div class="section-header">
+        <span class="section-label">Ngoại khóa</span>
+        <h2 class="section-title">Các hoạt động</h2>
+        <p class="section-subtitle">Đóng góp cộng đồng và phát triển kỹ năng mềm.</p>
+      </div>
+      <div class="cards-grid">
+        <article class="card card-glow-border media-card" data-aos="fade-up">
+          <div class="card-media"><img src="Image/483763158_9361457863946651_5463142257621129948_n.jpg" alt="CLB BKFC" loading="lazy" /></div>
+          <div class="card-body">
+            <div class="media-card-icon"><i class="fas fa-users"></i></div>
+            <h3>Thành viên CLB BKFC</h3>
+            <p>Ban truyền thông — tư vấn tuyển sinh ĐHBK.</p>
+          </div>
+        </article>
+        <article class="card card-glow-border media-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-media"><img src="Image/452931261_994877705975594_6983130677840463706_n.jpg" alt="BKRA Fablab" loading="lazy" /></div>
+          <div class="card-body">
+            <div class="media-card-icon"><i class="fas fa-robot"></i></div>
+            <h3>CLB BKRA &amp; Fablab</h3>
+            <p>Backend — C#, MSSQL, PLC.</p>
+            <div class="tag-row"><span class="tag">C#</span><span class="tag">MSSQL</span><span class="tag">PLC</span></div>
+          </div>
+        </article>
+        <article class="card card-glow-border media-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-media"><img src="Image/IMG_2651.JPG" alt="Tình nguyện" loading="lazy" /></div>
+          <div class="card-body">
+            <div class="media-card-icon"><i class="fas fa-heart"></i></div>
+            <h3>Tình nguyện "Ngược dòng Châu Mạ"</h3>
+            <p>Sân chơi cho trẻ em vùng Tây Nguyên.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section-contact" data-aos="fade-up">
+      <div class="contact-section-bg" aria-hidden="true"><img src="Image/Contact.jpg" alt="" loading="lazy" /></div>
+      <div class="contact-section-overlay" aria-hidden="true"></div>
+      <div class="contact-wrapper">
+        <div class="section-header">
+          <span class="section-label">Kết nối</span>
+          <h2 class="section-title">Liên hệ</h2>
+          <p class="section-subtitle">Sẵn sàng hợp tác, tư vấn kỹ thuật hoặc trao đổi cơ hội nghề nghiệp.</p>
+        </div>
+        <div class="card contact-panel glass-panel" data-aos="zoom-in">
+          <span class="section-label">Contact Me</span>
+          <h3>Lê Thanh Nhã</h3>
+          <p class="contact-role">Automation &amp; Control Engineer</p>
+          <div class="contact-grid">
+            <a href="https://www.google.com/maps/search/?api=1&query=Thu%20Duc%2C%20Ho%20Chi%20Minh%20City" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <span class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></span>
+              <span>Thủ Đức, TP. HCM</span>
+            </a>
+            <a href="https://zalo.me/84363685180" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <span class="contact-item-icon"><img src="Image/Zalo.png" alt="" width="20" height="20" /></span>
+              <span>+84 36 3685 180 (Zalo)</span>
+            </a>
+            <a href="https://linkedin.com/in/lethanhnha2003/" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <span class="contact-item-icon"><i class="fab fa-linkedin-in"></i></span>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://www.facebook.com/lethanhnhaLK10/" target="_blank" rel="noopener noreferrer" class="contact-item">
+              <span class="contact-item-icon"><i class="fab fa-facebook-f"></i></span>
+              <span>Facebook</span>
+            </a>
+            <a href="mailto:lethanhnha2507@gmail.com" class="contact-item contact-item--wide">
+              <span class="contact-item-icon"><i class="fas fa-envelope"></i></span>
+              <span>lethanhnha2507@gmail.com</span>
+            </a>
+          </div>
+          <div class="contact-cta-row">
+            <a href="mailto:lethanhnha2507@gmail.com" class="btn btn-primary"><i class="fas fa-envelope"></i> Contact Me</a>
+            <a href="https://linkedin.com/in/lethanhnha2003/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="border-t border-gray-800 mt-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-gray-500">
-      <p>&copy; Lê Thanh Nhã. Cùng nhau phát triển.</p>
-    </div>
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Lê Thanh Nhã · Automation &amp; Control Engineering</p>
   </footer>
 
-  <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   <script src="js/main.js"></script>
 </body>
 </html>
